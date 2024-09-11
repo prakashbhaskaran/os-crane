@@ -13,7 +13,7 @@ const AppNavbar = () => {
   const pathname = usePathname();
   const links = [
     { label: "Products", link: "/products" },
-    // { label: "Categories", link: "/categories" },
+    { label: "Categories", link: "/categories" },
   ];
   const top100Films = [
     { title: "The Shawshank Redemption", year: 1994 },
