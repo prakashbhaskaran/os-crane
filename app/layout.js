@@ -1,5 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import MainLayout from "./layouts/MainLayout";
+import NextTopLoader from "nextjs-toploader";
+import MaterialThemeProvider from "@providers/MaterialThemeProvider";
+import AuthSessionProvider from "@providers/AuthSessionProvider";
+import { customPalette } from "@constants/style";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +28,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NextTopLoader
+          color={customPalette.global.teritiary}
+          showSpinner={false}
+        />
+        <MaterialThemeProvider>
+          <AuthSessionProvider>
+            <MainLayout>{children}</MainLayout>
+          </AuthSessionProvider>
+        </MaterialThemeProvider>
       </body>
     </html>
   );

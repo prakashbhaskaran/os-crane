@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@components/*": ["./app/components/*"],
+      "@layouts/*": ["./app/layouts/*"],
+      "@providers/*": ["./app/providers/*"],
+      "@lib/*": ["./app/lib/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@@axios/*": ["./app/axios/*"],
+      "@constants/*": ["./constants/*"]
     }
   }
 }

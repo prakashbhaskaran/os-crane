@@ -1,89 +1,92 @@
 "use client";
-import React from "react";
-import Link from "next/link";
-import AppBox from "../../material-components/AppBox";
-import AppHstack from "../../material-components/AppHstack";
-import AppText from "../../material-components/AppText";
+import React, { useContext, useState } from "react";
+import AppBox from "@components/material-components/AppBox";
+import AppHstack from "@components/material-components/AppHstack";
+import { cssStyle, customPalette } from "@constants/style";
+import { Badge, IconButton } from "@mui/material";
+import AppContainer from "../AppContainer";
+import { ThemeContext } from "@providers/MaterialThemeProvider";
+import { GiHamburgerMenu } from "react-icons/gi";
+import NavDrawer from "@components/page-components/AppNavbar/NavDrawer";
+import SearchDrawer from "@components/page-components/AppNavbar/SearchDrawer";
 import { usePathname } from "next/navigation";
-import { Autocomplete, TextField } from "@mui/material";
-import AppButton from "../../material-components/AppButton";
-import { IoMdLogIn } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import AppLogo from "@components/page-components/AppLogo";
 
 const AppNavbar = () => {
   const pathname = usePathname();
-  const links = [
-    { label: "Products", link: "/products" },
-    { label: "Categories", link: "/categories" },
-  ];
-  const top100Films = [
-    { title: "The Shawshank Redemption", year: 1994 },
-    { title: "The Godfather", year: 1972 },
-    { title: "The Godfather: Part II", year: 1974 },
-    { title: "The Dark Knight", year: 2008 },
-    { title: "12 Angry Men", year: 1957 },
-    { title: "Schindler's List", year: 1993 },
-    { title: "Pulp Fiction", year: 1994 },
-  ];
+  const { handleDarkMode, dark } = useContext(ThemeContext);
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+
+  const handleDrawerClose = () => {
+    setOpenDrawer(false);
+  };
+  const handleDrawerOpen = () => {
+    setOpenDrawer(true);
+  };
+  const handleSearchClose = () => {
+    setOpenSearch(false);
+  };
+  const handleSearchOpen = () => {
+    setOpenSearch(true);
+  };
+  const is_home = pathname === "/";
+  let bgcolor = is_home ? customPalette.global.white : cssStyle.mainColor;
+  let color = is_home ? cssStyle.mainColor : customPalette.global.white;
+
   return (
     <AppBox
       sx={{
-        boxShadow: "0 0.8px #d8d8d8",
-        py: "10px",
+        position: "fixed",
+        top: "0px",
+        left: "0px",
+        right: "0px",
+        zIndex: 1000,
       }}
     >
-      <AppHstack
+      <AppBox
         sx={{
-          maxWidth: "1280px",
-          margin: "auto",
-          px: "10px",
+          background: bgcolor,
+          boxShadow: dark ? cssStyle.dividerColor : cssStyle.shadow.bottom,
+          borderBottom: dark ? `1px solid ${cssStyle.dividerColor}` : "none",
+          py: "10px",
+          px: "20px",
         }}
       >
-        <AppHstack gap="16px" width="50%">
-          <AppBox>
-            <Link href={"/"} style={{ textDecoration: "none" }}>
-              <AppText fontWeight="600">Store</AppText>
-            </Link>
-          </AppBox>
-          <AppBox>
-            <AppHstack gap={"16px"}>
-              {links.map((_) => {
-                return (
-                  <Link
-                    href={_?.link}
-                    key={_?.link}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <AppText
-                      text={_?.label}
-                      sx={
-                        {
-                          //   borderBottom: pathname.includes(_?.link)
-                          //     ? `3px solid #7b2ade`
-                          //     : "none",
-                        }
-                      }
-                    />
-                  </Link>
-                );
-              })}
+        <AppContainer>
+          <AppHstack justifyContent="space-between">
+            <AppHstack width="20%">
+              <IconButton onClick={handleDrawerOpen}>
+                <GiHamburgerMenu color={color} size={23} />
+              </IconButton>
             </AppHstack>
-          </AppBox>
-        </AppHstack>
-        <AppHstack width="50%" gap="16px" justifyContent="end">
-          <Autocomplete
-            id="free-solo-demo"
-            freeSolo
-            sx={{ width: "50%" }}
-            options={top100Films.map((option) => option.title)}
-            renderInput={(params) => (
-              <TextField {...params} label="Search..." size="small" />
-            )}
-          />
-          <AppButton sx={{ background: "black" }} startIcon={<IoMdLogIn />}>
-            Login
-          </AppButton>
-        </AppHstack>
-      </AppHstack>
+            <AppHstack width="60%" justifyContent="center">
+              <AppBox>
+                <AppLogo
+                  image={
+                    is_home
+                      ? "/logo-without-bg-primarycolor.png"
+                      : "/logo-without-bg.png"
+                  }
+                  textSx={{
+                    color: color,
+                  }}
+                  imageSize="30px"
+                />
+              </AppBox>
+            </AppHstack>
+
+            <AppHstack gap="10px" justifyContent="end" width="20%">
+              <IconButton onClick={handleSearchOpen} sx={{ p: "0px" }}>
+                <IoSearch color={color} size={23} />
+              </IconButton>
+            </AppHstack>
+          </AppHstack>
+        </AppContainer>
+        <NavDrawer open={openDrawer} handleClose={handleDrawerClose} />
+        <SearchDrawer open={openSearch} handleClose={handleSearchClose} />
+      </AppBox>{" "}
     </AppBox>
   );
 };
