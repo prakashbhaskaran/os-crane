@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { createContext, useState } from "react";
 import { cssStyle, customPalette } from "@constants/style";
+import { lato_font } from "@utils/theme";
 
 export const ThemeContext = createContext();
 
@@ -21,10 +22,10 @@ const MaterialThemeProvider = ({ children }) => {
     palette: {
       mode: dark ? "dark" : "light",
       text: {
-        primary: customPalette.global.black,
+        primary: customPalette.global.primary,
       },
       primary: {
-        main: customPalette.global.black,
+        main: customPalette.global.primary,
       },
       secondary: {
         main: customPalette.global.secondary,
@@ -55,6 +56,10 @@ const MaterialThemeProvider = ({ children }) => {
       },
     },
     components: {},
+
+    typography: {
+      fontFamily: lato_font.style.fontFamily,
+    },
   });
   return (
     <ThemeContext.Provider value={{ handleDarkMode, dark }}>

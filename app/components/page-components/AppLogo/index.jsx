@@ -41,7 +41,7 @@ const AppLogo = ({
       <AppText
         text={"OS CRANE PARTS"}
         sx={{
-          fontWeight: "500",
+          fontWeight: "700",
           fontSize: { xs: "1.1rem", md: "1.3rem" },
           ...textSx,
         }}

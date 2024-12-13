@@ -12,6 +12,7 @@ import SearchDrawer from "@components/page-components/AppNavbar/SearchDrawer";
 import { usePathname } from "next/navigation";
 import { IoSearch } from "react-icons/io5";
 import AppLogo from "@components/page-components/AppLogo";
+import AppButton from "@components/material-components/AppButton";
 
 const AppNavbar = () => {
   const pathname = usePathname();
@@ -51,7 +52,7 @@ const AppNavbar = () => {
           boxShadow: dark ? cssStyle.dividerColor : cssStyle.shadow.bottom,
           borderBottom: dark ? `1px solid ${cssStyle.dividerColor}` : "none",
           py: "10px",
-          px: "20px",
+          px: "10px",
         }}
       >
         <AppContainer>
@@ -78,9 +79,10 @@ const AppNavbar = () => {
             </AppHstack>
 
             <AppHstack gap="10px" justifyContent="end" width="20%">
-              <IconButton onClick={handleSearchOpen} sx={{ p: "0px" }}>
+              {/* <IconButton onClick={handleSearchOpen} sx={{ p: "0px" }}>
                 <IoSearch color={color} size={23} />
-              </IconButton>
+              </IconButton> */}
+              <AppButton>Enquire</AppButton>
             </AppHstack>
           </AppHstack>
         </AppContainer>
