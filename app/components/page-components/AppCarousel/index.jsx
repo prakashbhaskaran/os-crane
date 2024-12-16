@@ -9,37 +9,39 @@ import "swiper/css";
 
 import "./styles.css";
 import Image from "next/image";
+import AppText from "@components/material-components/AppText";
+import AppBox from "@components/material-components/AppBox";
+import AppButton from "@components/material-components/AppButton";
+import AppVstack from "@components/material-components/AppVstack";
+import AppLink from "../AppLink";
+import { style } from "@mui/system";
+import { cssStyle } from "@constants/style";
 
-export default function AppCarousel() {
+export default function AppCarousel({ delayTime = 2500 }) {
+  const data = [
+    {
+      id: "110",
+
+      src: "/assets/images/banner_1.jpg",
+    },
+  ];
   return (
     <Swiper
       className="mySwiper"
       autoplay={{
-        delay: 2500,
+        delay: delayTime,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
     >
-      <SwiperSlide>
-        <Image
-          src={
-            "https://plus.unsplash.com/premium_photo-1668114375111-e90b5e975df6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          sizes="100vw"
-          layout="fill"
-          alt="Example"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={
-            "https://images.unsplash.com/photo-1601758176175-45914394491c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          sizes="100vw"
-          layout="fill"
-          alt="Example"
-        />
-      </SwiperSlide>
+      {data.map((_) => {
+        return (
+          <SwiperSlide key={_.id} style={{ position: "relative", ..._?.style }}>
+            {_?.src && <Image src={_.src} sizes="100vw" fill alt="Example" />}
+            {_.textComponent}
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }

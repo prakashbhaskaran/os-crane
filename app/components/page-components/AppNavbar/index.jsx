@@ -13,6 +13,8 @@ import { usePathname } from "next/navigation";
 import { IoSearch } from "react-icons/io5";
 import AppLogo from "@components/page-components/AppLogo";
 import AppButton from "@components/material-components/AppButton";
+import { navbarLinks } from "@constants/links";
+import AppLink from "../AppLink";
 
 const AppNavbar = () => {
   const pathname = usePathname();
@@ -33,8 +35,10 @@ const AppNavbar = () => {
     setOpenSearch(true);
   };
   const is_home = pathname === "/";
-  let bgcolor = is_home ? customPalette.global.white : cssStyle.mainColor;
-  let color = is_home ? cssStyle.mainColor : customPalette.global.white;
+  // let bgcolor = is_home ? customPalette.global.white : cssStyle.mainColor;
+  let bgcolor = customPalette.global.white;
+  // let color = is_home ? cssStyle.mainColor : customPalette.global.white;
+  let color = cssStyle.mainColor;
 
   return (
     <AppBox
@@ -57,12 +61,18 @@ const AppNavbar = () => {
       >
         <AppContainer>
           <AppHstack justifyContent="space-between">
-            <AppHstack width="20%">
+            <AppHstack
+              width={{ xs: "20%", lg: "0%" }}
+              sx={{ display: { xs: "flex", lg: "none" } }}
+            >
               <IconButton onClick={handleDrawerOpen}>
                 <GiHamburgerMenu color={color} size={23} />
               </IconButton>
             </AppHstack>
-            <AppHstack width="60%" justifyContent="center">
+            <AppHstack
+              width={{ xs: "60%", lg: "80%" }}
+              justifyContent={{ xs: "center", lg: "start" }}
+            >
               <AppBox>
                 <AppLogo
                   image={
@@ -79,16 +89,58 @@ const AppNavbar = () => {
             </AppHstack>
 
             <AppHstack gap="10px" justifyContent="end" width="20%">
-              {/* <IconButton onClick={handleSearchOpen} sx={{ p: "0px" }}>
-                <IoSearch color={color} size={23} />
-              </IconButton> */}
-              <AppButton>Enquire</AppButton>
+              <AppLink href="/enquire">
+                <AppButton>Enquire</AppButton>
+              </AppLink>
             </AppHstack>
           </AppHstack>
         </AppContainer>
         <NavDrawer open={openDrawer} handleClose={handleDrawerClose} />
         <SearchDrawer open={openSearch} handleClose={handleSearchClose} />
-      </AppBox>{" "}
+      </AppBox>
+      <AppHstack
+        justifyContent="center"
+        sx={{
+          display: { xs: "none", lg: "flex" },
+          background: customPalette.global.primary,
+        }}
+      >
+        {navbarLinks.main.map((_) => {
+          return (
+            <AppHstack
+              key={_.link}
+              sx={{
+                height: "50px",
+                background:
+                  pathname === _.link
+                    ? customPalette.global.quinary
+                    : "initial",
+                "&:hover": {
+                  background: customPalette.global.quinary,
+                },
+              }}
+            >
+              <AppLink
+                href={_.link}
+                sx={{
+                  width: "200px",
+                  height: "100%",
+                }}
+              >
+                <AppHstack
+                  sx={{
+                    height: "100%",
+                    color: "white",
+                    justifyContent: "center",
+                  }}
+                >
+                  {_.label}
+                </AppHstack>
+              </AppLink>
+            </AppHstack>
+          );
+        })}
+      </AppHstack>
     </AppBox>
   );
 };

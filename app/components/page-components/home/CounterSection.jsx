@@ -4,7 +4,6 @@ import AppGrid from "@components/page-components/AppGrid";
 import { Card } from "@mui/material";
 import AppText from "@components/material-components/AppText";
 import AppVstack from "@components/material-components/AppVstack";
-import { startCase } from "lodash";
 import { FaRegHandshake } from "react-icons/fa6";
 import { MdSupportAgent } from "react-icons/md";
 import { IoDiamond } from "react-icons/io5";
@@ -56,7 +55,7 @@ export default function CounterSection() {
               <Counter value={item.value} />
               <AppText
                 sx={{ fontWeight: "500", fontSize: "1.2rem" }}
-                text={startCase(item.description)}
+                text={item.description}
               />
             </AppVstack>
           </Card>

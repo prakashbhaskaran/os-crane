@@ -2,8 +2,11 @@ import { FaShoppingBag } from "react-icons/fa";
 
 const navbarLinks = {
   main: [
-    { label: "Products", link: "/products" },
-    { label: "Cart", link: "/cart" },
+    { label: "Home", link: "/" },
+    { label: "About Us", link: "#about" },
+    { label: "Contact", link: "#contact" },
+    { label: "Products", link: "#products" },
+    { label: "Service", link: "#service" },
   ],
   menu: [
     { label: "Profile", link: "/profile" },
@@ -12,7 +15,13 @@ const navbarLinks = {
 };
 
 const navDrawerLinks = () => {
-  return [{ label: "PRODUCTS", link: "/products", icon: <FaShoppingBag /> }];
+  return [
+    { label: "Home", link: "/" },
+    { label: "About Us", link: "#about" },
+    { label: "Contact", link: "#contact" },
+    { label: "Products", link: "#products" },
+    { label: "Service", link: "#service" },
+  ];
 };
 const baseUrl =
   process.env.NODE_ENV === "production"
