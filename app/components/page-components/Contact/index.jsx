@@ -47,7 +47,11 @@ const Contact = () => {
         sx={{
           gap: "20px",
           justifyContent: "center",
-          gridTemplateColumns: { xs: "auto", md: "auto auto auto" },
+          gridTemplateColumns: {
+            xs: "auto",
+            md: "auto auto",
+            lg: "auto auto auto",
+          },
         }}
         mt="20px"
       >
@@ -57,13 +61,13 @@ const Contact = () => {
               <AppHstack
                 gap={"10px"}
                 alignItems="start"
-                justifyContent="center"
+                justifyContent={{ xs: "start", lg: "center" }}
               >
                 <AppBox
                   sx={{
                     border: `2px solid`,
                     borderRadius: "100%",
-                    padding: "10px",
+                    padding: "8px",
                     cursor: "pointer",
                   }}
                   onClick={() => handler(_.description, _.label)}

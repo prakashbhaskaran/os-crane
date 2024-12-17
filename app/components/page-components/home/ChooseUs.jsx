@@ -39,7 +39,7 @@ const ChooseUs = () => {
                 height: "200px",
               }}
             >
-              <IconButton>{item.icon}</IconButton>
+              <IconButton sx={{ fontSize: "40px" }}>{item.icon}</IconButton>
               <AppText
                 sx={{ fontWeight: "600", fontSize: "1.2rem" }}
                 text={upperCase(item.title)}

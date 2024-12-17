@@ -41,7 +41,7 @@ export default function CounterSection() {
       sx={{
         gridTemplateColumns: {
           xs: "auto",
-          md: "auto auto",
+          sm: "auto auto",
           lg: "minmax(300px, auto) minmax(300px, auto) minmax(300px, auto) minmax(300px, auto)",
         },
         justifyContent: "center",
