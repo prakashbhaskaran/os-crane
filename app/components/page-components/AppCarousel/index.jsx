@@ -17,14 +17,7 @@ import AppLink from "../AppLink";
 import { style } from "@mui/system";
 import { cssStyle } from "@constants/style";
 
-export default function AppCarousel({ delayTime = 2500 }) {
-  const data = [
-    {
-      id: "110",
-
-      src: "/assets/images/banner_1.jpg",
-    },
-  ];
+export default function AppCarousel({ delayTime = 2500, data }) {
   return (
     <Swiper
       className="mySwiper"

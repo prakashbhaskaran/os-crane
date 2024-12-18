@@ -98,49 +98,51 @@ const AppNavbar = () => {
         <NavDrawer open={openDrawer} handleClose={handleDrawerClose} />
         <SearchDrawer open={openSearch} handleClose={handleSearchClose} />
       </AppBox>
-      <AppHstack
-        justifyContent="center"
-        sx={{
-          display: { xs: "none", lg: "flex" },
-          background: customPalette.global.primary,
-        }}
-      >
-        {navbarLinks.main.map((_) => {
-          return (
-            <AppHstack
-              key={_.link}
-              sx={{
-                height: "50px",
-                background:
-                  pathname === _.link
-                    ? customPalette.global.quinary
-                    : "initial",
-                "&:hover": {
-                  background: customPalette.global.quinary,
-                },
-              }}
-            >
-              <AppLink
-                href={_.link}
+      {pathname !== "/enquire" && (
+        <AppHstack
+          justifyContent="center"
+          sx={{
+            display: { xs: "none", lg: "flex" },
+            background: customPalette.global.primary,
+          }}
+        >
+          {navbarLinks.main.map((_) => {
+            return (
+              <AppHstack
+                key={_.link}
                 sx={{
-                  width: "200px",
-                  height: "100%",
+                  height: "50px",
+                  background:
+                    pathname === _.link
+                      ? customPalette.global.quinary
+                      : "initial",
+                  "&:hover": {
+                    background: customPalette.global.quinary,
+                  },
                 }}
               >
-                <AppHstack
+                <AppLink
+                  href={_.link}
                   sx={{
+                    width: "200px",
                     height: "100%",
-                    color: "white",
-                    justifyContent: "center",
                   }}
                 >
-                  {_.label}
-                </AppHstack>
-              </AppLink>
-            </AppHstack>
-          );
-        })}
-      </AppHstack>
+                  <AppHstack
+                    sx={{
+                      height: "100%",
+                      color: "white",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {_.label}
+                  </AppHstack>
+                </AppLink>
+              </AppHstack>
+            );
+          })}
+        </AppHstack>
+      )}
     </AppBox>
   );
 };

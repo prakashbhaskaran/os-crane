@@ -19,7 +19,7 @@ const MainLayout = ({ children }) => {
   return (
     <AppBox className="main-container">
       <AppNavbar />
-      <AppBox pt="120px" pb="20px">
+      <AppBox pt={{ xs: "60px", lg: "100px" }} pb="20px">
         <MainAnimation>{children}</MainAnimation>
       </AppBox>
       <AppFooter />

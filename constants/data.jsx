@@ -5,6 +5,21 @@ import { FaWarehouse } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiGlobalFill } from "react-icons/ri";
 
+const heroSection = [
+  {
+    id: "110",
+    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "111",
+    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "112",
+    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 const chooseUs = [
   {
     title: "Experience",
@@ -100,4 +115,4 @@ const ourProducts = [
       "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
-export { chooseUs, ourProducts };
+export { chooseUs, ourProducts, heroSection };

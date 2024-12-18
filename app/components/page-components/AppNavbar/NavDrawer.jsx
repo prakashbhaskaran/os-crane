@@ -8,18 +8,12 @@ import AppHstack from "@components/material-components/AppHstack";
 import AppBox from "@components/material-components/AppBox";
 import { FaWindowClose } from "react-icons/fa";
 import { usePathname } from "next/navigation";
-import { signOut, useSession } from "next-auth/react";
 import { cssStyle, customPalette } from "@constants/style";
 import AppLogo from "@components/page-components/AppLogo";
 import AppVstack from "@components/material-components/AppVstack";
 import AppText from "@components/material-components/AppText";
-import { IoMdLogIn } from "react-icons/io";
-import { RiLogoutCircleLine } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
-import { MdAdminPanelSettings } from "react-icons/md";
 
 const NavDrawer = ({ open, handleClose }) => {
-  const { status, data } = useSession();
   const pathname = usePathname();
   return (
     <AppDrawer
