@@ -4,7 +4,7 @@ const navbarLinks = {
   main: [
     { label: "Home", link: "#home" },
     { label: "About Us", link: "#about" },
-    { label: "Contact", link: "#contact" },
+    // { label: "Contact", link: "#contact" },
     { label: "Products", link: "#products" },
     { label: "Service", link: "#service" },
   ],

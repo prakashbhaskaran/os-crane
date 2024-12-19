@@ -15,6 +15,7 @@ const ChooseUs = () => {
       <AppText
         sx={{
           color: "grey",
+          fontWeight: "600",
         }}
         text={
           "For 5 years we are devoted to serving clients in construction machinery spare parts business"
@@ -24,7 +25,7 @@ const ChooseUs = () => {
         sx={{
           gridTemplateColumns: {
             xs: "auto",
-            md: "repeat(2, 1fr)",
+            sm: "repeat(2, 1fr)",
             lg: "repeat(3, 1fr)",
           },
           justifyContent: "center",
@@ -38,13 +39,12 @@ const ChooseUs = () => {
               key={item.title}
               sx={{
                 p: "16px",
-                boxShadow: 0,
-                // border: `1px solid`,
-                height: "200px",
+                boxShadow: 1,
+                height: "220px",
               }}
             >
               <IconButton
-                sx={{ fontSize: "40px", color: customPalette.global.secondary }}
+                sx={{ fontSize: "40px", color: customPalette.global.teritiary }}
               >
                 {item.icon}
               </IconButton>
@@ -57,12 +57,12 @@ const ChooseUs = () => {
                 text={upperCase(item.title)}
               />
               {item.list.length > 0 && (
-                <AppVstack>
+                <AppVstack mt="1rem">
                   {item.list.map((_) => {
                     return (
                       <AppText
                         key={_.description}
-                        sx={{ color: "grey" }}
+                        sx={{ color: "grey", fontWeight: "600" }}
                         text={_.description}
                       />
                     );

@@ -8,13 +8,14 @@ import { FaRegHandshake } from "react-icons/fa6";
 import { MdSupportAgent } from "react-icons/md";
 import { IoDiamond } from "react-icons/io5";
 import { FaStackExchange } from "react-icons/fa";
+import { customPalette } from "@constants/style";
 
 export default function CounterSection() {
   const counterData = [
     {
-      value: 15,
+      value: 5,
       id: "1",
-      description: "More than 15 years spare part experience",
+      description: "More than 5 years spare part experience",
       icon: <IoDiamond />,
     },
     {
@@ -54,7 +55,7 @@ export default function CounterSection() {
             <AppVstack sx={{ alignItems: "center", textAlign: "center" }}>
               <Counter value={item.value} />
               <AppText
-                sx={{ fontWeight: "500", fontSize: "1.2rem" }}
+                sx={{ fontWeight: "500", fontSize: "1.1rem", color: "grey" }}
                 text={item.description}
               />
             </AppVstack>

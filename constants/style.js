@@ -1,10 +1,11 @@
 const customPalette = {
   global: {
-    primary: "#EF3A3B",
+    // primary: "#EF3A3B",
+    primary: "#FE0000",
     // primary: "#22252b",
     // secondary: "#53655c",
     secondary: "#FDCC32",
-    teritiary: "#a3aeb1",
+    teritiary: "#0E4496",
     quaternary: "#e5e8eb",
     quinary: "#b09f95",
     white: "#ffffff",

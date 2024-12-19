@@ -9,6 +9,7 @@ const AppLogo = ({
   link = "/",
   textSx = {},
   imageSize = "40px",
+  imageSrc = "/assets/images/os_red_logo.png",
   sx,
 }) => {
   return (
@@ -32,7 +33,7 @@ const AppLogo = ({
         }}
       >
         <Image
-          src={"/assets/images/os_red_logo.png"}
+          src={imageSrc}
           alt="LOGO"
           fill
           style={{

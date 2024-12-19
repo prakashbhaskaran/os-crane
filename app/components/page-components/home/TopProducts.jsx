@@ -24,7 +24,7 @@ const TopProducts = () => {
         sx={{
           gridTemplateColumns: {
             xs: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
+            sm: "repeat(2, 1fr)",
             lg: "repeat(4, minmax(300px, auto))",
           },
           justifyContent: "center",
@@ -57,7 +57,7 @@ const TopProducts = () => {
                   bottom: "0",
                   left: "0",
                   right: "0",
-                  background: customPalette.global.quinary,
+                  background: customPalette.global.secondary,
                   justifyContent: "center",
                   py: "5px",
                 }}
@@ -66,6 +66,7 @@ const TopProducts = () => {
                   href={item.image}
                   sx={{
                     color: customPalette.global.white,
+                    fontWeight: "700",
                   }}
                 >
                   {item.title}

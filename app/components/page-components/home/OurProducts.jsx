@@ -19,6 +19,7 @@ const OurProducts = () => {
         <AppText
           sx={{
             color: "grey",
+            fontWeight: "600",
           }}
           text={
             "For 5 years we are devoted to serving clients in construction machinery spare parts business"
@@ -58,7 +59,7 @@ const OurProducts = () => {
                   "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 }
               />
-              <AppBox
+              {/* <AppBox
                 sx={{
                   position: "absolute",
                   bottom: "20px",
@@ -70,7 +71,7 @@ const OurProducts = () => {
                   <AppText
                     text={item.title || "Crane Parts"}
                     sx={{
-                      color: "yellow",
+                      color: customPalette.global.secondary,
                       fontWeight: "700",
                       fontSize: "1.1rem",
                     }}
@@ -95,7 +96,7 @@ const OurProducts = () => {
                   background:
                     "linear-gradient(230deg, rgba(71,71,71,0.241421568627451) 55%, rgba(24,74,255,0.333858543417367) 74%)",
                 }}
-              ></AppBox>
+              ></AppBox> */}
             </AppBox>
           );
         })}

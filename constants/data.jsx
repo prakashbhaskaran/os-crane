@@ -55,7 +55,7 @@ const chooseUs = [
     list: [
       {
         description:
-          "No. 78, Verkadu Village Bypass, Gummudipoondi, Chennai - 601202",
+          "No. 78, Verkadu Village Bypass, Gummudipoondi, Chennai - 601202.",
       },
     ],
     icon: <FaLocationDot />,
@@ -63,8 +63,8 @@ const chooseUs = [
   {
     title: "Stock",
     list: [
-      { description: "We keep large stock of easy broken parts" },
-      { description: "Large warehouse" },
+      { description: "We keep large stock of easy broken parts." },
+      { description: "Large warehouse." },
     ],
     icon: <FaWarehouse />,
   },

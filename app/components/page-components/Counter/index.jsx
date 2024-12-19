@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 import AppBox from "@components/material-components/AppBox";
+import { customPalette } from "@constants/style";
 
 function Counter({ value = 0 }) {
   const Box = motion.create(AppBox);
@@ -23,7 +24,16 @@ function Counter({ value = 0 }) {
     return () => controls.stop();
   }, [count, value, isInView]);
   return (
-    <Box sx={{ fontSize: { xs: "1.7rem", md: "2.7rem" }, fontWeight: 700 }}>
+    <Box
+      sx={{
+        fontSize: {
+          xs: "1.2rem",
+          md: "2.2rem",
+          color: customPalette.global.teritiary,
+        },
+        fontWeight: 700,
+      }}
+    >
       <motion.span
         initial={{ opacity: 0 }}
         ref={ref}

@@ -31,12 +31,11 @@ export default function Home() {
         sx={{
           height: { xs: "320px", md: "700px" },
           borderRadius: "0.5rem",
-          // border: "1px solid",
         }}
       >
         <AppCarousel data={heroSection} />
       </AppBox>
-      {/* <AppContainer> */}
+
       <AppBox sx={{ ...greySection, mt: 0, pt: "6rem !important" }}>
         <AppContainer>
           <CounterSection />
@@ -68,9 +67,8 @@ export default function Home() {
         </AppContainer>
       </AppVstack>
       {/* <AppVstack mt="4rem" id="contact">
-          <Contact />
-        </AppVstack> */}
-      {/* </AppContainer> */}
+        <Contact />
+      </AppVstack> */}
     </AppBox>
   );
 }

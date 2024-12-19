@@ -5,7 +5,6 @@ import AppNavbar from "@components/page-components/AppNavbar";
 import { usePathname } from "next/navigation";
 
 import AppFooter from "@components/page-components/AppFooter";
-import MainAnimation from "@components/page-components/MainAnimation";
 const MainLayout = ({ children }) => {
   const pathname = usePathname();
 
@@ -20,7 +19,7 @@ const MainLayout = ({ children }) => {
     <AppBox className="main-container">
       <AppNavbar />
       <AppBox pt={{ xs: "60px", lg: "100px" }} pb="20px">
-        <MainAnimation>{children}</MainAnimation>
+        {children}
       </AppBox>
       <AppFooter />
     </AppBox>

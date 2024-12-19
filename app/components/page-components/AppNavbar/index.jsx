@@ -9,8 +9,7 @@ import { ThemeContext } from "@providers/MaterialThemeProvider";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavDrawer from "@components/page-components/AppNavbar/NavDrawer";
 import SearchDrawer from "@components/page-components/AppNavbar/SearchDrawer";
-import { usePathname } from "next/navigation";
-import { IoSearch } from "react-icons/io5";
+import { usePathname, useRouter } from "next/navigation";
 import AppLogo from "@components/page-components/AppLogo";
 import AppButton from "@components/material-components/AppButton";
 import { navbarLinks } from "@constants/links";
@@ -19,6 +18,7 @@ import { MdOutlineTouchApp } from "react-icons/md";
 
 const AppNavbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const { handleDarkMode, dark } = useContext(ThemeContext);
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
@@ -40,7 +40,6 @@ const AppNavbar = () => {
   let bgcolor = customPalette.global.white;
   // let color = is_home ? cssStyle.mainColor : customPalette.global.white;
   let color = cssStyle.mainColor;
-
   return (
     <AppBox
       sx={{
@@ -122,10 +121,10 @@ const AppNavbar = () => {
                   height: "50px",
                   background:
                     pathname === _.link
-                      ? customPalette.global.quinary
+                      ? customPalette.global.secondary
                       : "initial",
                   "&:hover": {
-                    background: customPalette.global.quinary,
+                    background: customPalette.global.secondary,
                   },
                 }}
               >

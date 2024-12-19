@@ -2,12 +2,12 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-const AppBox = ({ children, ref, sx, ...rest }) => {
+const AppBox = React.forwardRef(function AppBox(props, ref) {
   return (
-    <Box sx={sx} ref={ref} {...rest}>
-      {children}
+    <Box ref={ref} {...props}>
+      {props.children}
     </Box>
   );
-};
+});
 
 export default AppBox;

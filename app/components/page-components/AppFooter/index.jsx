@@ -52,7 +52,7 @@ const AppFooter = () => {
                     color: customPalette.global.white,
                   }}
                   imageSize="30px"
-                  image="/logo-without-bg.png"
+                  imageSrc="/assets/images/os_white_logo.png"
                   sx={{ gap: "6px" }}
                 />
               </AppBox>
