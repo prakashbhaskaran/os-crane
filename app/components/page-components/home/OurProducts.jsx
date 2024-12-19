@@ -8,6 +8,7 @@ import AppGrid from "../AppGrid";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ourProducts } from "@constants/data.jsx";
+import { customPalette } from "@constants/style";
 
 const OurProducts = () => {
   const MotionImage = motion.create(Image);
@@ -16,8 +17,11 @@ const OurProducts = () => {
       <AppVstack alignItems="center" textAlign="center">
         <AppHeader heading="OUR PRODUCTS" />
         <AppText
+          sx={{
+            color: "grey",
+          }}
           text={
-            "For 15 years we are devoted to serving clients in construction machinery spare parts business"
+            "For 5 years we are devoted to serving clients in construction machinery spare parts business"
           }
         />
       </AppVstack>

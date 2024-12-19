@@ -2,7 +2,7 @@ import { FaShoppingBag } from "react-icons/fa";
 
 const navbarLinks = {
   main: [
-    { label: "Home", link: "/" },
+    { label: "Home", link: "#home" },
     { label: "About Us", link: "#about" },
     { label: "Contact", link: "#contact" },
     { label: "Products", link: "#products" },

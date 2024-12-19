@@ -1,6 +1,8 @@
 import React from "react";
 import AppLink from "@components/page-components/AppLink";
 import AppText from "@components/material-components/AppText";
+import Image from "next/image";
+import AppBox from "@components/material-components/AppBox";
 
 const AppLogo = ({
   handleClose = () => {},
@@ -22,7 +24,7 @@ const AppLogo = ({
         ...sx,
       }}
     >
-      {/* <AppBox
+      <AppBox
         sx={{
           position: "relative",
           height: { xs: "30px", md: imageSize },
@@ -30,14 +32,14 @@ const AppLogo = ({
         }}
       >
         <Image
-          src={imageSrc}
+          src={"/assets/images/os_red_logo.png"}
           alt="LOGO"
           fill
           style={{
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         />
-      </AppBox> */}
+      </AppBox>
       <AppText
         text={"OS CRANE PARTS"}
         sx={{

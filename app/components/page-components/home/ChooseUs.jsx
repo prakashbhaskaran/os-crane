@@ -6,14 +6,18 @@ import AppGrid from "../AppGrid";
 import { Card, IconButton } from "@mui/material";
 import { chooseUs } from "@constants/data";
 import { upperCase } from "lodash";
+import { customPalette } from "@constants/style";
 
 const ChooseUs = () => {
   return (
     <AppVstack alignItems="center" mt="4rem" textAlign="center">
       <AppHeader heading="WHY CHOOSE US" />
       <AppText
+        sx={{
+          color: "grey",
+        }}
         text={
-          "For 15 years we are devoted to serving clients in construction machinery spare parts business"
+          "For 5 years we are devoted to serving clients in construction machinery spare parts business"
         }
       />
       <AppGrid
@@ -39,15 +43,29 @@ const ChooseUs = () => {
                 height: "200px",
               }}
             >
-              <IconButton sx={{ fontSize: "40px" }}>{item.icon}</IconButton>
+              <IconButton
+                sx={{ fontSize: "40px", color: customPalette.global.secondary }}
+              >
+                {item.icon}
+              </IconButton>
               <AppText
-                sx={{ fontWeight: "600", fontSize: "1.2rem" }}
+                sx={{
+                  fontWeight: "700",
+                  fontSize: "1.2rem",
+                  color: customPalette.global.black,
+                }}
                 text={upperCase(item.title)}
               />
               {item.list.length > 0 && (
                 <AppVstack>
                   {item.list.map((_) => {
-                    return <AppText key={_.description} text={_.description} />;
+                    return (
+                      <AppText
+                        key={_.description}
+                        sx={{ color: "grey" }}
+                        text={_.description}
+                      />
+                    );
                   })}
                 </AppVstack>
               )}

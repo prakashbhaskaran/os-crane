@@ -6,41 +6,71 @@ import AppVstack from "@components/material-components/AppVstack";
 import AppHeader from "@components/page-components/AppHeader";
 import AppCarousel from "@components/page-components/AppCarousel";
 import { heroSection } from "@constants/data";
-
-import Contact from "@components/page-components/Contact";
 import About from "@components/page-components/About";
 import OurProducts from "@components/page-components/home/OurProducts";
 import ChooseUs from "@components/page-components/home/ChooseUs";
+import TopProducts from "@components/page-components/home/TopProducts";
+import Brands from "@components/page-components/home/Brands";
 
 export default function Home() {
+  const greySection = {
+    background: "#f9f9f9",
+    pt: "2rem",
+    pb: "6rem",
+    mt: "4rem",
+  };
+  const normalSection = {
+    pt: "2rem",
+    pb: "6rem",
+    mt: "4rem",
+  };
   return (
     <AppBox>
-      <AppBox sx={{ height: { xs: "420px", md: "700px" } }}>
+      <AppBox
+        id="home"
+        sx={{
+          height: { xs: "320px", md: "700px" },
+          borderRadius: "0.5rem",
+          // border: "1px solid",
+        }}
+      >
         <AppCarousel data={heroSection} />
       </AppBox>
-      <AppContainer>
-        <AppBox mt="4rem">
+      {/* <AppContainer> */}
+      <AppBox sx={{ ...greySection, mt: 0, pt: "6rem !important" }}>
+        <AppContainer>
           <CounterSection />
-        </AppBox>
-        <AppBox mt="4rem" id="products">
+        </AppContainer>
+      </AppBox>
+      <AppBox sx={normalSection} id="products">
+        <AppContainer>
           <OurProducts />
-        </AppBox>
-        <AppVstack alignItems="center" mt="4rem" textAlign="center">
-          <AppHeader heading="TOP PRODUCTS" />
-        </AppVstack>
-        <AppBox mt="4rem" id="service">
+        </AppContainer>
+      </AppBox>
+      <AppBox sx={greySection}>
+        <AppContainer>
+          <TopProducts />
+        </AppContainer>
+      </AppBox>
+      <AppBox mt="4rem" id="service">
+        <AppContainer>
           <ChooseUs />
-        </AppBox>
-        <AppVstack alignItems="center" mt="4rem" textAlign="center">
-          <AppHeader heading="PARTNER BRANDS" />
-        </AppVstack>
-        <AppVstack mt="4rem" id="about">
+        </AppContainer>
+      </AppBox>
+      <AppVstack mt="4rem" sx={greySection}>
+        <AppContainer>
+          <Brands />
+        </AppContainer>
+      </AppVstack>
+      <AppVstack sx={normalSection} id="about">
+        <AppContainer>
           <About />
-        </AppVstack>
-        {/* <AppVstack mt="4rem" id="contact">
+        </AppContainer>
+      </AppVstack>
+      {/* <AppVstack mt="4rem" id="contact">
           <Contact />
         </AppVstack> */}
-      </AppContainer>
+      {/* </AppContainer> */}
     </AppBox>
   );
 }

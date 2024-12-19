@@ -8,15 +8,15 @@ import { RiGlobalFill } from "react-icons/ri";
 const heroSection = [
   {
     id: "110",
-    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/assets/images/banner_1.jpg",
   },
   {
     id: "111",
-    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/assets/images/banner_2.jpg",
   },
   {
     id: "112",
-    src: "https://plus.unsplash.com/premium_photo-1721460167399-3fc0f325156f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/assets/images/banner_3.jpg",
   },
 ];
 
@@ -52,7 +52,12 @@ const chooseUs = [
   },
   {
     title: "Location",
-    list: [{ description: "Location" }, { description: "Location" }],
+    list: [
+      {
+        description:
+          "No. 78, Verkadu Village Bypass, Gummudipoondi, Chennai - 601202",
+      },
+    ],
     icon: <FaLocationDot />,
   },
   {
@@ -94,25 +99,28 @@ const ourProducts = [
     image:
       "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  {
-    title: "",
-    image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "",
-    image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "",
-    image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "",
-    image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
 ];
-export { chooseUs, ourProducts, heroSection };
+
+const topProducts = [
+  { title: "Air Dryer Filter", image: "/assets/images/air_dryer_filter.jpg" },
+  {
+    title: "Gear Selector 127 x 157",
+    image: "/assets/images/gear_selector_127_x_157.jpg",
+  },
+  {
+    title: "Head Lamp Assembly",
+    image: "/assets/images/head_lamp_assembly.jpg",
+  },
+  { title: "Master Cylinder", image: "/assets/images/master_cylinder.jpg" },
+  { title: "Slave Cylinder", image: "/assets/images/slave_cylinder.jpg" },
+  {
+    title: "Steering Oil Reserve Bottel",
+    image: "/assets/images/steering_oil_reserve_bottel.jpg",
+  },
+  {
+    title: "Starter Solonoid Coll 24V",
+    image: "/assets/images/starter_solonoid_coll_24v.jpg",
+  },
+  { title: "Suspension Rubber", image: "/assets/images/suspension_rubber.jpg" },
+];
+export { chooseUs, ourProducts, heroSection, topProducts };
