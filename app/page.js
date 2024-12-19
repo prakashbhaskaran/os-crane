@@ -51,12 +51,12 @@ export default function Home() {
           <TopProducts />
         </AppContainer>
       </AppBox>
-      <AppBox mt="4rem" id="service">
+      <AppBox id="service">
         <AppContainer>
           <ChooseUs />
         </AppContainer>
       </AppBox>
-      <AppVstack mt="4rem" sx={greySection}>
+      <AppVstack sx={greySection}>
         <AppContainer>
           <Brands />
         </AppContainer>

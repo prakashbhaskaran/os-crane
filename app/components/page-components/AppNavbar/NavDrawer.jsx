@@ -34,6 +34,7 @@ const NavDrawer = ({ open, handleClose }) => {
           >
             <AppLogo
               imageSize="30px"
+              imageSrc="/assets/images/os_white_logo.png"
               handleClose={handleClose}
               textSx={{ color: customPalette.global.white }}
             />
