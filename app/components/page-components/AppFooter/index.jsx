@@ -22,8 +22,8 @@ const AppFooter = () => {
     {
       name: "RESOURCES",
       list: [
-        { name: "About", link: "#about" },
-        { name: "Contact", link: "#contact" },
+        { name: "About", link: "/about" },
+        { name: "Contact", link: "/contact" },
       ],
     },
   ];

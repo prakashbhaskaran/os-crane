@@ -12,6 +12,12 @@ input::-webkit-inner-spin-button {
 
 html {
   min-height: 100vh;
+  scroll-padding-top: 60px;
+}
+@media screen and (min-width: 1201px) {
+  html {
+    scroll-padding-top: 100px;
+  }
 }
 
 /* Firefox */
@@ -84,4 +90,7 @@ footer {
   to {
     transform: translateX(-30%);
   }
+}
+.active-scroll-spy {
+  background-color: #fdcc32;
 }

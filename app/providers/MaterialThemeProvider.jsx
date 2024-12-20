@@ -31,16 +31,16 @@ const MaterialThemeProvider = ({ children }) => {
         main: customPalette.global.secondary,
       },
       teritiary: {
-        main: customPalette.global.quaternary,
-        light: alpha(customPalette.global.quaternary, 0.5),
-        dark: alpha(customPalette.global.quaternary, 0.9),
+        main: customPalette.global.teritiary,
+        light: alpha(customPalette.global.teritiary, 0.5),
+        dark: alpha(customPalette.global.teritiary, 0.9),
         contrastText:
           getContrastRatio(
-            customPalette.global.quaternary,
+            customPalette.global.teritiary,
             customPalette.global.white
           ) > 4.5
-            ? customPalette.global.quaternary
-            : customPalette.global.white,
+            ? customPalette.global.white
+            : customPalette.global.teritiary,
       },
       light: {
         main: customPalette.global.white,

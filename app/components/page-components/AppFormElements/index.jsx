@@ -108,7 +108,7 @@ const AppFormElements = ({
               </AppLink>
               <AppButton
                 isLoading={isFormLoading}
-                color="primary"
+                color="teritiary"
                 type="submit"
               >
                 {isFormLoading ? "Submitting..." : "Submit"}

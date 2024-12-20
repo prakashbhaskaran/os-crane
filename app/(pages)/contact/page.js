@@ -1,13 +1,18 @@
 import AppBox from "@components/material-components/AppBox";
+import AppContainer from "@components/page-components/AppContainer";
 import AppHeader from "@components/page-components/AppHeader";
+import Contact from "@components/page-components/Contact";
 import React from "react";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <AppBox>
-      <AppHeader heading="Contact" />
+      <AppContainer>
+        <AppHeader heading="Contact" />
+        <Contact />
+      </AppContainer>
     </AppBox>
   );
 };
 
-export default Contact;
+export default ContactPage;

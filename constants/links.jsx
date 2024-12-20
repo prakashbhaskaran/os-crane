@@ -2,11 +2,10 @@ import { FaShoppingBag } from "react-icons/fa";
 
 const navbarLinks = {
   main: [
-    { label: "Home", link: "#home" },
-    { label: "About Us", link: "#about" },
-    // { label: "Contact", link: "#contact" },
-    { label: "Products", link: "#products" },
-    { label: "Service", link: "#service" },
+    { label: "Home", link: "/", id: "home" },
+    { label: "Products", link: "/products", id: "products" },
+    { label: "About Us", link: "/about", id: "about" },
+    { label: "Contact", link: "/contact", id: "contact" },
   ],
   menu: [
     { label: "Profile", link: "/profile" },
@@ -16,11 +15,10 @@ const navbarLinks = {
 
 const navDrawerLinks = () => {
   return [
-    { label: "Home", link: "/" },
-    { label: "About Us", link: "#about" },
-    { label: "Contact", link: "#contact" },
-    { label: "Products", link: "#products" },
-    { label: "Service", link: "#service" },
+    { label: "Home", link: "/", id: "home" },
+    { label: "Products", link: "/products", id: "products" },
+    { label: "About Us", link: "/about", id: "about" },
+    { label: "Contact", link: "/contact", id: "contact" },
   ];
 };
 const baseUrl =

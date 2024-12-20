@@ -8,15 +8,15 @@ import { RiGlobalFill } from "react-icons/ri";
 const heroSection = [
   {
     id: "110",
-    src: "/assets/images/banner_1.jpg",
+    src: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682257/kfju8cqawqlrpsbpw3m3.jpg",
   },
   {
     id: "111",
-    src: "/assets/images/banner_2.jpg",
+    src: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682259/hgvw5y6jcyzpvbzb4zj3.jpg",
   },
   {
     id: "112",
-    src: "/assets/images/banner_3.jpg",
+    src: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682255/jb16ikt0zu7eytxzz1py.jpg",
   },
 ];
 
@@ -102,25 +102,46 @@ const ourProducts = [
 ];
 
 const topProducts = [
-  { title: "Air Dryer Filter", image: "/assets/images/air_dryer_filter.jpg" },
+  {
+    title: "Air Dryer Filter",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682247/nhietnbo8tdnabssy7l8.jpg",
+  },
   {
     title: "Gear Selector 127 x 157",
-    image: "/assets/images/gear_selector_127_x_157.jpg",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682247/ppnmpfi9ja3nlqfjbcbp.jpg",
   },
   {
     title: "Head Lamp Assembly",
-    image: "/assets/images/head_lamp_assembly.jpg",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682248/nncuuhuy3b74hjslgf4f.jpg",
   },
-  { title: "Master Cylinder", image: "/assets/images/master_cylinder.jpg" },
-  { title: "Slave Cylinder", image: "/assets/images/slave_cylinder.jpg" },
+  {
+    title: "Master Cylinder",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682248/pq0c1xdzvt6v5xc68r7z.jpg",
+  },
+  {
+    title: "Slave Cylinder",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682249/ihx7zwx6vwtpapjmdjhm.jpg",
+  },
   {
     title: "Steering Oil Reserve Bottel",
-    image: "/assets/images/steering_oil_reserve_bottel.jpg",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682249/wp5mkafpsuzjce5rqscp.jpg",
   },
   {
     title: "Starter Solonoid Coll 24V",
-    image: "/assets/images/starter_solonoid_coll_24v.jpg",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682249/zir6i0zkdachosvjs9kp.jpg",
   },
-  { title: "Suspension Rubber", image: "/assets/images/suspension_rubber.jpg" },
+  {
+    title: "Suspension Rubber",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682247/ozzlj3weesuuk232zoak.jpg",
+  },
 ];
+
 export { chooseUs, ourProducts, heroSection, topProducts };

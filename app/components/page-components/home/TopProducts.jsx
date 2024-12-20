@@ -10,16 +10,13 @@ import { motion } from "framer-motion";
 import { topProducts } from "@constants/data.jsx";
 import AppLink from "../AppLink";
 import { customPalette } from "@constants/style";
-import AppHstack from "@components/material-components/AppHstack";
+import { Card } from "@mui/material";
+import AppButton from "@components/material-components/AppButton";
 
 const TopProducts = () => {
   const MotionImage = motion.create(Image);
-  const MotionBox = motion.create(AppBox);
   return (
-    <AppBox>
-      <AppVstack alignItems="center" textAlign="center">
-        <AppHeader heading="TOP PRODUCTS" />
-      </AppVstack>
+    <AppBox sx={{ py: "2rem" }}>
       <AppGrid
         sx={{
           gridTemplateColumns: {
@@ -27,52 +24,59 @@ const TopProducts = () => {
             sm: "repeat(2, 1fr)",
             lg: "repeat(4, minmax(300px, auto))",
           },
-          justifyContent: "center",
           gap: "20px",
-          mt: "2rem",
         }}
       >
         {topProducts.map((item, index) => {
           return (
-            <MotionBox
-              sx={{ position: "relative", height: "300px", overflow: "hidden" }}
+            <Card
+              sx={{ position: "relative", height: "450px", overflow: "hidden" }}
               key={index}
             >
-              <MotionImage
-                alt="Crane Parts"
-                fill
-                style={{ objectFit: "cover" }}
-                src={item.image}
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.5 },
-                }}
-                transition={{
-                  duration: 0.5,
-                }}
-              />
-              <AppHstack
+              <AppBox
                 sx={{
-                  position: "absolute",
-                  bottom: "0",
-                  left: "0",
-                  right: "0",
-                  background: customPalette.global.secondary,
-                  justifyContent: "center",
-                  py: "5px",
+                  height: "330px",
+                  width: "100%",
+                  position: "relative",
+                  overFlow: "hidden",
                 }}
               >
-                <AppLink
-                  href={item.image}
+                <MotionImage
+                  alt="Crane Parts"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  src={item.image}
+                />
+              </AppBox>
+              <AppVstack
+                sx={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  mt: "1rem",
+                  gap: "1rem",
+                }}
+              >
+                <AppText
                   sx={{
-                    color: customPalette.global.white,
+                    color: customPalette.global.black,
                     fontWeight: "700",
                   }}
                 >
                   {item.title}
+                </AppText>
+                <AppLink href={item.image} target="_blank">
+                  <AppButton
+                    color="secondary"
+                    sx={{
+                      color: customPalette.global.black,
+                      fontWeight: "700",
+                    }}
+                  >
+                    View full image
+                  </AppButton>
                 </AppLink>
-              </AppHstack>
-            </MotionBox>
+              </AppVstack>
+            </Card>
           );
         })}
       </AppGrid>

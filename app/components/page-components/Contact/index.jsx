@@ -10,6 +10,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IconButton } from "@mui/material";
 import AppGrid from "../AppGrid";
+import { customPalette } from "@constants/style";
 
 const Contact = () => {
   const data = [
@@ -39,18 +40,11 @@ const Contact = () => {
   };
   return (
     <AppBox>
-      <AppVstack justifyContent="center" alignItems="center">
-        <AppHeader heading="CONTACT" />
-        <AppText text={"Please contact us for more queries."} />
-      </AppVstack>
       <AppGrid
         sx={{
           gap: "20px",
-          justifyContent: "center",
           gridTemplateColumns: {
             xs: "auto",
-            md: "auto auto",
-            lg: "auto auto auto",
           },
         }}
         mt="20px"
@@ -58,27 +52,27 @@ const Contact = () => {
         {data.map((_) => {
           return (
             <AppBox key={_.label} sx={{ width: { xs: "100%", md: "400px" } }}>
-              <AppHstack
-                gap={"10px"}
-                alignItems="start"
-                justifyContent={{ xs: "start", lg: "center" }}
-              >
+              <AppHstack gap={"10px"} alignItems="start">
                 <AppBox
                   sx={{
-                    border: `2px solid`,
-                    borderRadius: "100%",
                     padding: "8px",
                     cursor: "pointer",
                   }}
                   onClick={() => handler(_.description, _.label)}
                 >
-                  <IconButton>{_.icon}</IconButton>
+                  <IconButton sx={{ color: customPalette.global.primary }}>
+                    {_.icon}
+                  </IconButton>
                 </AppBox>
                 <AppVstack alignItems="start">
                   <AppText
                     sx={{
                       fontWeight: "700",
-                      fontSize: { xs: "1rem", md: "1.3rem" },
+                      fontSize: {
+                        xs: "1rem",
+                        md: "1.3rem",
+                        color: customPalette.global.teritiary,
+                      },
                     }}
                     text={`${_.label}`}
                   />

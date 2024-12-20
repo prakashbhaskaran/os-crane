@@ -41,7 +41,7 @@ export default function CounterSection() {
     <AppGrid
       sx={{
         gridTemplateColumns: {
-          xs: "auto",
+          xs: "auto auto",
           sm: "auto auto",
           lg: "minmax(300px, auto) minmax(300px, auto) minmax(300px, auto) minmax(300px, auto)",
         },
@@ -51,11 +51,11 @@ export default function CounterSection() {
     >
       {counterData.map((item) => {
         return (
-          <Card width="500px" key={item.id} sx={{ p: "20px", boxShadow: 3 }}>
+          <Card width="500px" key={item.id} sx={{ p: "20px", boxShadow: 0 }}>
             <AppVstack sx={{ alignItems: "center", textAlign: "center" }}>
               <Counter value={item.value} />
               <AppText
-                sx={{ fontWeight: "500", fontSize: "1.1rem", color: "grey" }}
+                sx={{ fontWeight: "500", fontSize: "1rem", color: "grey" }}
                 text={item.description}
               />
             </AppVstack>

@@ -5,6 +5,7 @@ import AppNavbar from "@components/page-components/AppNavbar";
 import { usePathname } from "next/navigation";
 
 import AppFooter from "@components/page-components/AppFooter";
+
 const MainLayout = ({ children }) => {
   const pathname = usePathname();
 
@@ -18,7 +19,7 @@ const MainLayout = ({ children }) => {
   return (
     <AppBox className="main-container">
       <AppNavbar />
-      <AppBox pt={{ xs: "60px", lg: "100px" }} pb="20px">
+      <AppBox pt={{ xs: "4rem", lg: "4rem" }} pb="20px">
         {children}
       </AppBox>
       <AppFooter />

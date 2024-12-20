@@ -1,15 +1,16 @@
 const customPalette = {
   global: {
     // primary: "#EF3A3B",
-    primary: "#FE0000",
+    primary: "#FE0000", //red
     // primary: "#22252b",
     // secondary: "#53655c",
-    secondary: "#FDCC32",
-    teritiary: "#0E4496",
+    secondary: "#FDCC32", //yellow
+    teritiary: "#0E4496", //blue
     quaternary: "#e5e8eb",
     quinary: "#b09f95",
     white: "#ffffff",
     black: "#111",
+    grey: "#f9f9f9",
   },
 };
 const cssStyle = {

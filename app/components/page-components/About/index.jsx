@@ -7,9 +7,6 @@ import React from "react";
 const About = () => {
   return (
     <AppBox>
-      <AppHstack justifyContent="center">
-        <AppHeader heading="ABOUT US" />
-      </AppHstack>
       <AppVstack
         sx={{
           mt: "14px",

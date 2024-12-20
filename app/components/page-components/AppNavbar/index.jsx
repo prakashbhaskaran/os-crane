@@ -36,9 +36,7 @@ const AppNavbar = () => {
     setOpenSearch(true);
   };
   const is_home = pathname === "/";
-  // let bgcolor = is_home ? customPalette.global.white : cssStyle.mainColor;
   let bgcolor = customPalette.global.white;
-  // let color = is_home ? cssStyle.mainColor : customPalette.global.white;
   let color = cssStyle.mainColor;
   return (
     <AppBox
@@ -61,25 +59,20 @@ const AppNavbar = () => {
       >
         <AppContainer>
           <AppHstack justifyContent="space-between">
-            <AppHstack
-              width={{ xs: "20%", lg: "0%" }}
+            {/* <AppHstack
+              // width={{ xs: "20%", lg: "0%" }}
               sx={{ display: { xs: "flex", lg: "none" } }}
             >
               <IconButton onClick={handleDrawerOpen}>
                 <GiHamburgerMenu color={color} size={23} />
               </IconButton>
-            </AppHstack>
+            </AppHstack> */}
             <AppHstack
-              width={{ xs: "60%", lg: "80%" }}
+              // width={{ xs: "60%", lg: "80%" }}
               justifyContent={{ xs: "center", lg: "start" }}
             >
               <AppBox>
                 <AppLogo
-                  image={
-                    is_home
-                      ? "/logo-without-bg-primarycolor.png"
-                      : "/logo-without-bg.png"
-                  }
                   textSx={{
                     color: color,
                   }}
@@ -87,69 +80,85 @@ const AppNavbar = () => {
                 />
               </AppBox>
             </AppHstack>
+            <AppHstack
+              justifyContent="center"
+              sx={{
+                display: { xs: "none", lg: "flex" },
+                gap: "20px",
+              }}
+            >
+              {navbarLinks.main.map((_) => {
+                return (
+                  <AppHstack
+                    key={_.link}
+                    sx={{
+                      "&:hover": {},
+                    }}
+                  >
+                    <AppLink
+                      href={_.link}
+                      sx={{
+                        height: "100%",
+                        color: customPalette.global.black,
+                        fontWeight: "700",
+                        borderBottom:
+                          pathname === _.link
+                            ? `3px solid ${customPalette.global.primary}`
+                            : "",
+                      }}
+                      textSx={{ color: customPalette.global.black }}
+                    >
+                      {_.label}
+                    </AppLink>
+                  </AppHstack>
+                );
+              })}
+            </AppHstack>
 
-            <AppHstack gap="10px" justifyContent="end" width="20%">
-              <AppLink href="/enquire">
-                <AppButton>
-                  <AppBox sx={{ display: { xs: "block", md: "none" } }}>
-                    <MdOutlineTouchApp color="white" size={23} />
-                  </AppBox>
-                  <AppBox sx={{ display: { xs: "none", md: "block" } }}>
-                    Enquire
-                  </AppBox>
-                </AppButton>
-              </AppLink>
+            <AppHstack justifyContent="end" /* width="20%" */>
+              <IconButton
+                onClick={handleDrawerOpen}
+                sx={{ display: { xs: "block", md: "none" } }}
+              >
+                <GiHamburgerMenu color={color} size={23} />
+              </IconButton>
+              <AppHstack
+                sx={{
+                  position: { xs: "fixed", md: "initial" },
+                  bottom: "10px",
+                }}
+              >
+                <AppLink href="/enquire">
+                  <AppButton
+                    sx={{
+                      lineHeight: { xs: "0px", md: "1.75" },
+                      minWidth: { xs: "0px", md: "64px" },
+                    }}
+                    color="secondary"
+                  >
+                    <AppBox sx={{ display: { xs: "block", md: "none" } }}>
+                      <MdOutlineTouchApp color="white" size={23} />
+                    </AppBox>
+                    <AppBox
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                          color: customPalette.global.black,
+                        },
+                      }}
+                    >
+                      Enquire
+                    </AppBox>
+                  </AppButton>
+                </AppLink>
+              </AppHstack>
             </AppHstack>
           </AppHstack>
         </AppContainer>
         <NavDrawer open={openDrawer} handleClose={handleDrawerClose} />
         <SearchDrawer open={openSearch} handleClose={handleSearchClose} />
       </AppBox>
-      {pathname !== "/enquire" && (
-        <AppHstack
-          justifyContent="center"
-          sx={{
-            display: { xs: "none", lg: "flex" },
-            background: customPalette.global.primary,
-          }}
-        >
-          {navbarLinks.main.map((_) => {
-            return (
-              <AppHstack
-                key={_.link}
-                sx={{
-                  height: "50px",
-                  background:
-                    pathname === _.link
-                      ? customPalette.global.secondary
-                      : "initial",
-                  "&:hover": {
-                    background: customPalette.global.secondary,
-                  },
-                }}
-              >
-                <AppLink
-                  href={_.link}
-                  sx={{
-                    width: "200px",
-                    height: "100%",
-                  }}
-                >
-                  <AppHstack
-                    sx={{
-                      height: "100%",
-                      color: "white",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {_.label}
-                  </AppHstack>
-                </AppLink>
-              </AppHstack>
-            );
-          })}
-        </AppHstack>
-      )}
     </AppBox>
   );
 };

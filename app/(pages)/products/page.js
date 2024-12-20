@@ -1,18 +1,19 @@
 import AppBox from "@components/material-components/AppBox";
-import About from "@components/page-components/About";
 import AppContainer from "@components/page-components/AppContainer";
 import AppHeader from "@components/page-components/AppHeader";
+import TopProducts from "@components/page-components/home/TopProducts";
 import React from "react";
 
-const AboutPage = () => {
+const Products = () => {
   return (
     <AppBox>
       <AppContainer>
-        <AppHeader heading="About Us" />
-        <About />
+        <AppHeader heading="Products" />
+
+        <TopProducts />
       </AppContainer>
     </AppBox>
   );
 };
 
-export default AboutPage;
+export default Products;

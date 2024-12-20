@@ -10,7 +10,7 @@ import { customPalette } from "@constants/style";
 
 const ChooseUs = () => {
   return (
-    <AppVstack alignItems="center" mt="4rem" textAlign="center">
+    <AppVstack alignItems="center" textAlign="center">
       <AppHeader heading="WHY CHOOSE US" />
       <AppText
         sx={{
