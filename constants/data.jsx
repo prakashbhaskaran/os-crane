@@ -143,5 +143,16 @@ const topProducts = [
       "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682247/ozzlj3weesuuk232zoak.jpg",
   },
 ];
+const warehouse = [
+  {
+    img: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734688126/warehouse/mrqkujjvdxwyvnwepmo3.jpg",
+  },
+  {
+    img: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734688114/warehouse/uwwirpm8snpq6ar2qaod.jpg",
+  },
+  {
+    img: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734687926/warehouse/slwdiqkil6ee9dwi8v19.jpg",
+  },
+];
 
-export { chooseUs, ourProducts, heroSection, topProducts };
+export { chooseUs, ourProducts, heroSection, topProducts, warehouse };

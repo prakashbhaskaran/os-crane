@@ -48,9 +48,8 @@ const NavDrawer = ({ open, handleClose }) => {
                 <ListItemButton
                   key={_.label}
                   sx={{
-                    background: pathname.includes(_?.link)
-                      ? `rgba(0, 0, 0, 0.04)`
-                      : "initial",
+                    background:
+                      pathname === _?.link ? `rgba(0, 0, 0, 0.04)` : "initial",
                   }}
                 >
                   <AppLink
@@ -64,9 +63,10 @@ const NavDrawer = ({ open, handleClose }) => {
                       <IconButton
                         sx={{
                           padding: "0px",
-                          color: pathname.includes(_?.link)
-                            ? customPalette.global.secondary
-                            : customPalette.global.primary,
+                          color:
+                            pathname === _?.link
+                              ? customPalette.global.primary
+                              : customPalette.global.black,
                         }}
                         size={"20px"}
                       >
@@ -75,9 +75,10 @@ const NavDrawer = ({ open, handleClose }) => {
                       <AppText
                         sx={{
                           fontWeight: "600",
-                          color: pathname.includes(_?.link)
-                            ? customPalette.global.secondary
-                            : customPalette.global.primary,
+                          color:
+                            pathname === _?.link
+                              ? customPalette.global.primary
+                              : customPalette.global.black,
                         }}
                         text={_?.label}
                       />

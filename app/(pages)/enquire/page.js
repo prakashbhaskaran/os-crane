@@ -45,7 +45,7 @@ const BusinessForm = () => {
   };
   return (
     <AppContainer>
-      <AppBox>
+      <AppBox mt="5rem">
         <AppHeader heading={"BUSINESS ENQUIRY"} />
         <AppBox mt="20px">
           {visible ? (

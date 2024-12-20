@@ -6,7 +6,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <AppBox>
+    <AppBox mt="5rem">
       <AppContainer>
         <AppHeader heading="About Us" />
         <About />

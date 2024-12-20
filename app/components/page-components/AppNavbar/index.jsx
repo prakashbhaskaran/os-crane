@@ -35,7 +35,7 @@ const AppNavbar = () => {
   const handleSearchOpen = () => {
     setOpenSearch(true);
   };
-  const is_home = pathname === "/";
+
   let bgcolor = customPalette.global.white;
   let color = cssStyle.mainColor;
   return (
@@ -83,7 +83,7 @@ const AppNavbar = () => {
             <AppHstack
               justifyContent="center"
               sx={{
-                display: { xs: "none", lg: "flex" },
+                display: { xs: "none", md: "flex" },
                 gap: "20px",
               }}
             >
@@ -125,7 +125,7 @@ const AppNavbar = () => {
               <AppHstack
                 sx={{
                   position: { xs: "fixed", md: "initial" },
-                  bottom: "10px",
+                  bottom: "20px",
                 }}
               >
                 <AppLink href="/enquire">

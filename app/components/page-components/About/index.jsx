@@ -11,7 +11,6 @@ const About = () => {
         sx={{
           mt: "14px",
           gap: "20px",
-          textAlign: { xs: "center", md: "start" },
         }}
       >
         <AppBox sx={{ fontSize: "1.1rem", fontWeight: "600", color: "grey" }}>

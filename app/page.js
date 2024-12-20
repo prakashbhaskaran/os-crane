@@ -9,6 +9,7 @@ import OurProducts from "@components/page-components/home/OurProducts";
 import ChooseUs from "@components/page-components/home/ChooseUs";
 import TopProducts from "@components/page-components/home/TopProducts";
 import Brands from "@components/page-components/home/Brands";
+import Warehouse from "@components/page-components/home/Warehouse";
 
 export default function Home() {
   const greySection = {
@@ -19,7 +20,7 @@ export default function Home() {
     py: "3.2rem",
   };
   return (
-    <AppBox>
+    <AppBox mt="3.6rem">
       <AppBox
         sx={{
           height: { xs: "320px", md: "700px" },
@@ -42,6 +43,11 @@ export default function Home() {
       <AppBox sx={normalSection}>
         <AppContainer>
           <ChooseUs />
+        </AppContainer>
+      </AppBox>
+      <AppBox sx={normalSection}>
+        <AppContainer>
+          <Warehouse />
         </AppContainer>
       </AppBox>
       {/* <AppVstack sx={greySection}>

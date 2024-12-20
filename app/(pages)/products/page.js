@@ -6,7 +6,7 @@ import React from "react";
 
 const Products = () => {
   return (
-    <AppBox>
+    <AppBox mt="5rem">
       <AppContainer>
         <AppHeader heading="Products" />
 

@@ -6,7 +6,7 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <AppBox>
+    <AppBox mt="5rem">
       <AppContainer>
         <AppHeader heading="Contact" />
         <Contact />
