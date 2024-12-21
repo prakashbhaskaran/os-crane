@@ -36,7 +36,7 @@ export default function Home() {
         </AppContainer>
       </AppBox>
 
-      <AppBox sx={normalSection}>
+      <AppBox sx={greySection}>
         <AppContainer>
           <ChooseUs />
         </AppContainer>

@@ -89,7 +89,12 @@ const NavDrawer = ({ open, handleClose }) => {
               );
             })}
             <ListItemButton>
-              <AppLink href="/enquire">
+              <AppLink
+                href="/enquire"
+                onClick={() => {
+                  handleClose();
+                }}
+              >
                 <AppButton color="secondary">Enquire</AppButton>
               </AppLink>
             </ListItemButton>

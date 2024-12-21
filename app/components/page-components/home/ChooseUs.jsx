@@ -39,7 +39,7 @@ const ChooseUs = () => {
               key={item.title}
               sx={{
                 p: "16px",
-                boxShadow: 1,
+                boxShadow: 0,
                 height: "220px",
               }}
             >

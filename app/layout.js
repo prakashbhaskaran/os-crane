@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextTopLoader
-          color={customPalette.global.teritiary}
+          color={customPalette.global.secondary}
           showSpinner={false}
         />
         <MaterialThemeProvider>
