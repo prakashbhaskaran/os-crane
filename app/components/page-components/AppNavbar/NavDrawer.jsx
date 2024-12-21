@@ -12,6 +12,7 @@ import { cssStyle, customPalette } from "@constants/style";
 import AppLogo from "@components/page-components/AppLogo";
 import AppVstack from "@components/material-components/AppVstack";
 import AppText from "@components/material-components/AppText";
+import AppButton from "@components/material-components/AppButton";
 
 const NavDrawer = ({ open, handleClose }) => {
   const pathname = usePathname();
@@ -87,6 +88,11 @@ const NavDrawer = ({ open, handleClose }) => {
                 </ListItemButton>
               );
             })}
+            <ListItemButton>
+              <AppLink href="/enquire">
+                <AppButton color="secondary">Enquire</AppButton>
+              </AppLink>
+            </ListItemButton>
           </AppList>
         </AppBox>
       </AppVstack>

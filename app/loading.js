@@ -5,7 +5,7 @@ import React from "react";
 const Loading = () => {
   return (
     <AppHstack
-      sx={{ justifyContent: "center", alignItems: "center", height: "40vh" }}
+      sx={{ justifyContent: "center", alignItems: "center", height: "90vh" }}
     >
       <CircularProgress />
     </AppHstack>

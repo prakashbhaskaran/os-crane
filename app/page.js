@@ -1,14 +1,10 @@
 import AppBox from "./components/material-components/AppBox";
-
 import AppContainer from "@components/page-components/AppContainer";
 import CounterSection from "@components/page-components/home/CounterSection";
-import AppVstack from "@components/material-components/AppVstack";
 import AppCarousel from "@components/page-components/AppCarousel";
 import { heroSection } from "@constants/data";
 import OurProducts from "@components/page-components/home/OurProducts";
 import ChooseUs from "@components/page-components/home/ChooseUs";
-import TopProducts from "@components/page-components/home/TopProducts";
-import Brands from "@components/page-components/home/Brands";
 import Warehouse from "@components/page-components/home/Warehouse";
 
 export default function Home() {
@@ -23,7 +19,7 @@ export default function Home() {
     <AppBox mt="3.6rem">
       <AppBox
         sx={{
-          height: { xs: "320px", md: "700px" },
+          height: { xs: "233px", sm: "355px", md: "505px", lg: "700px" },
         }}
       >
         <AppCarousel data={heroSection} />

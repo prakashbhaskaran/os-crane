@@ -5,15 +5,23 @@ import { warehouse } from "@constants/data";
 import Image from "next/image";
 import React from "react";
 import AppHeader from "../AppHeader";
+import AppText from "@components/material-components/AppText";
 
 const Warehouse = () => {
   return (
     <AppBox>
       <AppVstack alignItems="center" textAlign="center">
         <AppHeader heading="WAREHOUSE" />
+        <AppText
+          sx={{
+            color: "grey",
+            fontWeight: "600",
+          }}
+          text={"Our products storage area"}
+        />
       </AppVstack>
-      <AppHstack mt="1rem" sx={{ height: { xs: "600px" } }}>
-        <AppVstack width="50%" height="100%">
+      <AppHstack mt="1rem" sx={{ height: { xs: "600px" }, gap: "10px" }}>
+        <AppVstack width="50%" height="100%" gap="10px">
           <AppBox sx={{ position: "relative", height: "400px", width: "100%" }}>
             <Image
               src={warehouse[0].img}

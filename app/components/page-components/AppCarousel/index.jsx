@@ -10,13 +10,20 @@ import "swiper/css";
 import "./styles.css";
 import Image from "next/image";
 
-export default function AppCarousel({ delayTime = 2500, data }) {
+export default function AppCarousel({
+  delayTime = 2500,
+  data,
+  backgroundColor = "transparent",
+}) {
   return (
     <Swiper
       className="mySwiper"
       autoplay={{
         delay: delayTime,
         disableOnInteraction: false,
+      }}
+      style={{
+        background: backgroundColor,
       }}
       modules={[Autoplay]}
     >

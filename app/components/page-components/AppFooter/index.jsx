@@ -10,6 +10,8 @@ import AppLogo from "../AppLogo";
 import { customPalette } from "@constants/style";
 
 const AppFooter = () => {
+  const d = new Date();
+  let year = d.getFullYear();
   const links = [
     {
       name: "LEGAL",
@@ -48,7 +50,7 @@ const AppFooter = () => {
               <AppBox>
                 <AppLogo
                   textSx={{
-                    fontSize: "1.2rem",
+                    fontSize: "1.4rem",
                     color: customPalette.global.white,
                   }}
                   imageSize="30px"
@@ -58,7 +60,7 @@ const AppFooter = () => {
               </AppBox>
 
               <AppText sx={{ color: customPalette.global.white }}>
-                © 2024. All Rights Reserved.
+                © {year}. All Rights Reserved
               </AppText>
             </AppVstack>
 

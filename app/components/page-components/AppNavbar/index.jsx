@@ -53,7 +53,7 @@ const AppNavbar = () => {
           background: bgcolor,
           boxShadow: dark ? cssStyle.dividerColor : cssStyle.shadow.bottom,
           borderBottom: dark ? `1px solid ${cssStyle.dividerColor}` : "none",
-          py: "10px",
+          py: { xs: "6px", md: "10px" },
           px: "10px",
         }}
       >

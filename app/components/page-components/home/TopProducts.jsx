@@ -16,7 +16,7 @@ import AppButton from "@components/material-components/AppButton";
 const TopProducts = () => {
   const MotionImage = motion.create(Image);
   return (
-    <AppBox sx={{ py: "2rem" }}>
+    <AppBox sx={{ pt: "1rem", pb: "2rem" }}>
       <AppGrid
         sx={{
           gridTemplateColumns: {
