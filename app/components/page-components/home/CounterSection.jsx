@@ -19,15 +19,15 @@ export default function CounterSection() {
       icon: <IoDiamond />,
     },
     {
-      value: 90,
+      value: 10,
       id: "2",
-      description: "Customers served in more than 90 countries",
+      description: "Customers served in more than 10 countries",
       icon: <FaRegHandshake />,
     },
     {
-      value: 6200,
+      value: 580,
       id: "3",
-      description: "Sales made more than 6200 cases worldwide",
+      description: "Sales made more than 580 cases worldwide",
       icon: <FaStackExchange />,
     },
     {

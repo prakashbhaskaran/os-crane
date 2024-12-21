@@ -11,7 +11,7 @@ const Warehouse = () => {
   return (
     <AppBox>
       <AppVstack alignItems="center" textAlign="center">
-        <AppHeader heading="WAREHOUSE" />
+        <AppHeader heading="INVENTORY CENTER" />
         <AppText
           sx={{
             color: "grey",
