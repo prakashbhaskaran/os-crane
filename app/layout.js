@@ -20,6 +20,14 @@ const geistMono = localFont({
 export const metadata = {
   title: "OS CRANE PARTS",
   description: "International and domestic crane parts suppliers",
+  keywords: [
+    "xcmg crane parts",
+    "xcmg spare parts",
+    "hydra crane spare parts",
+    "forklift spare parts",
+    "zoomlion crane spare parts",
+    "sany crane spare parts",
+  ],
 };
 
 export default function RootLayout({ children }) {

@@ -17,7 +17,9 @@ const Warehouse = () => {
             color: "grey",
             fontWeight: "600",
           }}
-          text={"Our products storage area"}
+          text={
+            "Stock of machinery spares organized for quick and efficient access"
+          }
         />
       </AppVstack>
       <AppHstack mt="1rem" sx={{ height: { xs: "600px" }, gap: "10px" }}>
