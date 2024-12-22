@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
           </AuthSessionProvider>
         </MaterialThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-LLVYHXR2M2" />
+      <GoogleAnalytics gaId="G-23Q6GWKMG2" />
     </html>
   );
 }
