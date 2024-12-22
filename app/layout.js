@@ -36,6 +36,9 @@ export const metadata = {
     title: "OS CRANE PARTS",
     description: "International and domestic crane parts suppliers",
   },
+  verification: {
+    google: "BzDyuVqEpacXwEg3rm-qMvz7g6-zMr3kYj8KlN7nwpo",
+  },
 };
 
 export default function RootLayout({ children }) {
