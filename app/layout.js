@@ -5,6 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 import MaterialThemeProvider from "@providers/MaterialThemeProvider";
 import AuthSessionProvider from "@providers/AuthSessionProvider";
 import { customPalette } from "@constants/style";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +19,10 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "OS CRANE PARTS",
+  title: {
+    default: "OS CRANE PARTS",
+    template: `OS CRANE PARTS | %s`,
+  },
   description: "International and domestic crane parts suppliers",
   keywords: [
     "xcmg crane parts",
@@ -28,6 +32,10 @@ export const metadata = {
     "zoomlion crane spare parts",
     "sany crane spare parts",
   ],
+  openGraph: {
+    title: "OS CRANE PARTS",
+    description: "International and domestic crane parts suppliers",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -46,6 +54,7 @@ export default function RootLayout({ children }) {
           </AuthSessionProvider>
         </MaterialThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-LLVYHXR2M2" />
     </html>
   );
 }

@@ -11,6 +11,7 @@ import { MdEmail } from "react-icons/md";
 import { IconButton } from "@mui/material";
 import AppGrid from "../AppGrid";
 import { customPalette } from "@constants/style";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const data = [
@@ -30,12 +31,20 @@ const Contact = () => {
       description: "oscraneparts20@gmail.com",
       icon: <MdEmail size={20} />,
     },
+    {
+      label: "WhatsApp",
+      description: "918056220468",
+      value: "+91 8056220468",
+      icon: <FaWhatsapp size={20} />,
+    },
   ];
   const handler = (value, name) => {
     if (name === "Email") {
       window.location.href = `mailto:${value}`;
     } else if (name === "Mobile") {
       window.location.href = `tel:${value}`;
+    } else if (name === "WhatsApp") {
+      window.location.href = `https://wa.me/${value}`;
     }
   };
   return (
@@ -83,7 +92,7 @@ const Contact = () => {
                       fontWeight: "700",
                       color: "grey",
                     }}
-                    text={_.description}
+                    text={_.value || _.description}
                   />
                 </AppVstack>
               </AppHstack>

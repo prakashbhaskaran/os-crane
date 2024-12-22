@@ -6,6 +6,15 @@ import { heroSection } from "@constants/data";
 import OurProducts from "@components/page-components/home/OurProducts";
 import ChooseUs from "@components/page-components/home/ChooseUs";
 import Warehouse from "@components/page-components/home/Warehouse";
+export const metadata = {
+  title: "Home",
+  description: "International and domestic crane parts suppliers",
+
+  openGraph: {
+    title: "OS CRANE PARTS",
+    description: "International and domestic crane parts suppliers",
+  },
+};
 
 export default function Home() {
   const greySection = {

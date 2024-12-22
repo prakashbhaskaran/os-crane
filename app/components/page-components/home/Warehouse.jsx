@@ -22,7 +22,10 @@ const Warehouse = () => {
           }
         />
       </AppVstack>
-      <AppHstack mt="1rem" sx={{ height: { xs: "600px" }, gap: "10px" }}>
+      <AppHstack
+        mt="1rem"
+        sx={{ height: { xs: "450px", md: "600px" }, gap: "10px" }}
+      >
         <AppVstack width="50%" height="100%" gap="10px">
           <AppBox sx={{ position: "relative", height: "400px", width: "100%" }}>
             <Image
@@ -42,7 +45,13 @@ const Warehouse = () => {
           </AppBox>
         </AppVstack>
         <AppHstack width="50%" height="100%">
-          <AppBox sx={{ position: "relative", height: "600px", width: "100%" }}>
+          <AppBox
+            sx={{
+              position: "relative",
+              height: { xs: "450px", md: "600px" },
+              width: "100%",
+            }}
+          >
             <Image
               src={warehouse[2].img}
               alt=""

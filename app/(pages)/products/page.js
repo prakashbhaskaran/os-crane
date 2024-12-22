@@ -4,6 +4,14 @@ import AppContainer from "@components/page-components/AppContainer";
 import AppHeader from "@components/page-components/AppHeader";
 import TopProducts from "@components/page-components/home/TopProducts";
 import React from "react";
+export const metadata = {
+  title: "Products",
+  description: "List of products available.",
+  openGraph: {
+    title: "Products",
+    description: "List of products available.",
+  },
+};
 
 const Products = () => {
   return (

@@ -7,10 +7,7 @@ const navbarLinks = {
     { label: "About Us", link: "/about", id: "about" },
     { label: "Contact", link: "/contact", id: "contact" },
   ],
-  menu: [
-    { label: "Profile", link: "/profile" },
-    { label: "Orders", link: "/orders" },
-  ],
+  extra: [{ label: "Enquire", link: "/enquire", id: "enquire" }],
 };
 
 const navDrawerLinks = () => {
@@ -23,7 +20,7 @@ const navDrawerLinks = () => {
 };
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://store.com"
+    ? "https://oscraneparts.com"
     : "http://localhost:3000";
 
 export { navbarLinks, baseUrl, navDrawerLinks };
