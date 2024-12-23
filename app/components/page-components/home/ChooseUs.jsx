@@ -40,11 +40,15 @@ const ChooseUs = () => {
               sx={{
                 p: "16px",
                 boxShadow: 0,
-                height: "220px",
+                height: "250px",
               }}
             >
               <IconButton
-                sx={{ fontSize: "40px", color: customPalette.global.teritiary }}
+                sx={{
+                  fontSize: "35px",
+                  mt: "0.8rem",
+                  color: customPalette.global.teritiary,
+                }}
               >
                 {item.icon}
               </IconButton>

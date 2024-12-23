@@ -17,7 +17,9 @@ export async function POST(req, res) {
     to: process.env.EMAIL,
     subject: `Business Enquiry`,
     text: `Business`,
-    html: `<div>From - ${data.name}(${data.email})</div>${data.description}`,
+    html: `<div>From - ${data.name}(${data.email})</div>
+    <div>WhatsApp Number - <a href='https://wa.me/${data.wnumber}'>${data.wnumber}</a></div>
+    <div>${data.description}</div>`,
   });
   return getResponse("Email has been sent");
 }
