@@ -36,14 +36,17 @@ const Contact = () => {
           .filter((item) => item.label !== "Enquire")
           .map((_) => {
             return (
-              <AppBox key={_.label} sx={{ width: { xs: "100%", md: "400px" } }}>
+              <AppBox
+                key={_.label}
+                sx={{ width: { xs: "100%", md: "400px" } }}
+                onClick={() => handler(_.description, _.label)}
+              >
                 <AppHstack gap={"10px"} alignItems="start">
                   <AppBox
                     sx={{
                       padding: "8px",
                       cursor: "pointer",
                     }}
-                    onClick={() => handler(_.description, _.label)}
                   >
                     <IconButton sx={{ color: customPalette.global.primary }}>
                       {_.icon}
