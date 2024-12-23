@@ -5,6 +5,7 @@ import AppNavbar from "@components/page-components/AppNavbar";
 import { usePathname } from "next/navigation";
 
 import AppFooter from "@components/page-components/AppFooter";
+import ContactFloat from "@components/page-components/Contact/ContactFloat";
 
 const MainLayout = ({ children }) => {
   const pathname = usePathname();
@@ -21,6 +22,7 @@ const MainLayout = ({ children }) => {
       <AppNavbar />
       <AppBox pb="20px">{children}</AppBox>
       <AppFooter />
+      <ContactFloat />
     </AppBox>
   );
 };

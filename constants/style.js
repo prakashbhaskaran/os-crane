@@ -17,6 +17,7 @@ const cssStyle = {
   mainColor: customPalette.global.primary,
   shadow: {
     bottom: "0 0.8px #d8d8d8",
+    top: "0.8px 0 #d8d8d8",
   },
   nameText: { fontSize: "1.5rem", fontWeight: "600" },
   headText: { fontSize: "2rem", fontWeight: "700" },

@@ -1,9 +1,8 @@
 import { PiMedalFill } from "react-icons/pi";
-import { RiTeamFill } from "react-icons/ri";
-import { FaShieldAlt } from "react-icons/fa";
-import { FaWarehouse } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
-import { RiGlobalFill } from "react-icons/ri";
+import { RiTeamFill, RiGlobalFill } from "react-icons/ri";
+import { FaShieldAlt, FaWhatsapp, FaMobileAlt } from "react-icons/fa";
+import { FaWarehouse, FaLocationDot } from "react-icons/fa6";
+import { MdEmail, MdOutlineTouchApp } from "react-icons/md";
 
 const heroSection = [
   {
@@ -154,5 +153,42 @@ const warehouse = [
     img: "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734687926/warehouse/slwdiqkil6ee9dwi8v19.jpg",
   },
 ];
+const contactList = [
+  {
+    label: "Address",
+    description:
+      "No. 78, Verkadu Village Bypass, Gummudipoondi, Chennai - 601202",
+    icon: <FaLocationDot size={20} />,
+  },
+  {
+    label: "Mobile",
+    description: "+91 8056220468",
+    icon: <FaMobileAlt size={20} />,
+  },
+  {
+    label: "Email",
+    description: "oscraneparts20@gmail.com",
+    icon: <MdEmail size={20} />,
+  },
+  {
+    label: "WhatsApp",
+    description: "918056220468",
+    value: "+91 8056220468",
+    icon: <FaWhatsapp size={20} />,
+  },
+  {
+    label: "Enquire",
+    description: "/enquire",
+    value: "enquire",
+    icon: <MdOutlineTouchApp size={20} />,
+  },
+];
 
-export { chooseUs, ourProducts, heroSection, topProducts, warehouse };
+export {
+  chooseUs,
+  ourProducts,
+  heroSection,
+  topProducts,
+  warehouse,
+  contactList,
+};

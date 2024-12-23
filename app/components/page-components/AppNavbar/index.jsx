@@ -14,7 +14,6 @@ import AppLogo from "@components/page-components/AppLogo";
 import AppButton from "@components/material-components/AppButton";
 import { navbarLinks } from "@constants/links";
 import AppLink from "../AppLink";
-import { MdOutlineTouchApp } from "react-icons/md";
 
 const AppNavbar = () => {
   const pathname = usePathname();
@@ -124,28 +123,17 @@ const AppNavbar = () => {
               </IconButton>
               <AppHstack
                 sx={{
-                  position: { xs: "fixed", md: "initial" },
-                  bottom: "20px",
+                  display: {
+                    xs: "none",
+                    md: "block",
+                  },
                 }}
               >
                 <AppLink href="/enquire">
-                  <AppButton
-                    sx={{
-                      lineHeight: { xs: "0px", md: "1.75" },
-                      minWidth: { xs: "0px", md: "64px" },
-                    }}
-                    color="secondary"
-                  >
-                    <AppBox sx={{ display: { xs: "block", md: "none" } }}>
-                      <MdOutlineTouchApp color="white" size={23} />
-                    </AppBox>
+                  <AppButton color="secondary">
                     <AppBox
                       sx={{
-                        display: {
-                          xs: "none",
-                          md: "block",
-                          color: customPalette.global.black,
-                        },
+                        color: customPalette.global.black,
                       }}
                     >
                       Enquire
