@@ -15,7 +15,10 @@ const Brands = () => {
       </AppVstack>
       <AppGrid
         sx={{
-          gridTemplateColumns: "repeat(4, minmax(200px, auto))",
+          gridTemplateColumns: {
+            xs: "repeat(2, minmax(200px, auto))",
+            md: "repeat(4, minmax(200px, auto))",
+          },
 
           justifyContent: "center",
           gap: "4px",
