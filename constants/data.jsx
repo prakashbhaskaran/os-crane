@@ -79,24 +79,24 @@ const chooseUs = [
 
 const ourProducts = [
   {
-    title: "",
+    title: "Excavator",
     image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949220/Our%20Products/vrgvhsgasn36nfgozq66.jpg",
   },
   {
-    title: "",
+    title: "Construction Machinery",
     image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949219/Our%20Products/u8znyciu26t5yg4foxzv.jpg",
   },
   {
-    title: "",
+    title: "Forklift",
     image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949020/Our%20Products/iyvmpk8z5mhm5ngnbdec.jpg",
   },
   {
-    title: "",
+    title: "Mobile Crane",
     image:
-      "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734948999/Our%20Products/apqub1uhqej4i1cj218q.jpg",
   },
 ];
 
@@ -184,6 +184,49 @@ const contactList = [
   },
 ];
 
+const brands = [
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/yzlghrsoovrzk4tpoxg6.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/osi23ntsxcur7uq0wfgu.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/su3pn558takhohjsgbor.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/nbv8gj7ggbxawgmdjj2n.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/e2ej4bbdjcmobs609iqj.png",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/wulvaik5nsqauffkd2su.png",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/vsaj6ufjhgfluvtcrmqt.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/xymkq3zj9ohz4mywrxvb.jpg",
+  },
+];
+
 export {
   chooseUs,
   ourProducts,
@@ -191,4 +234,5 @@ export {
   topProducts,
   warehouse,
   contactList,
+  brands,
 };

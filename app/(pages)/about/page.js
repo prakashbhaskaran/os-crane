@@ -13,7 +13,7 @@ export const metadata = {
 };
 const AboutPage = () => {
   return (
-    <AppBox mt="5rem">
+    <AppBox mt="5rem" pb="2rem">
       <AppContainer>
         <AppHeader heading="About Us" />
         <About />

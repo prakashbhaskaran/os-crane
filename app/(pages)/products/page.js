@@ -15,7 +15,7 @@ export const metadata = {
 
 const Products = () => {
   return (
-    <AppBox mt="5rem">
+    <AppBox mt="5rem" pb="2rem">
       <AppContainer>
         <AppHeader heading="Products" />
         <AppText

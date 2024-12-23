@@ -45,7 +45,7 @@ const BusinessForm = () => {
   };
   return (
     <AppContainer>
-      <AppBox mt="5rem">
+      <AppBox mt="5rem" pb="2rem">
         <AppHeader heading={"BUSINESS ENQUIRY"} />
         <AppText
           sx={{ color: "grey" }}

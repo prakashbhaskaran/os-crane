@@ -55,11 +55,9 @@ const OurProducts = () => {
                 alt="Crane"
                 fill
                 style={{ objectFit: "cover" }}
-                src={
-                  "https://images.unsplash.com/photo-1514203043587-ee4a5149f470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                }
+                src={item.image}
               />
-              {/* <AppBox
+              <AppBox
                 sx={{
                   position: "absolute",
                   bottom: "20px",
@@ -74,29 +72,18 @@ const OurProducts = () => {
                       color: customPalette.global.secondary,
                       fontWeight: "700",
                       fontSize: "1.1rem",
+                      // "-webkit-text-stroke": "1px red",
                     }}
                   />
                   <AppBox
                     sx={{
                       height: "10px",
                       width: "70px",
-                      borderBottom: "5px solid yellow",
+                      borderBottom: `5px solid ${customPalette.global.secondary}`,
                     }}
                   />
                 </AppBox>
               </AppBox>
-              <AppBox
-                sx={{
-                  position: "absolute",
-                  bottom: "0px",
-                  left: "0px",
-                  top: "0px",
-                  right: "0px",
-                  //   background: "url(https://aliyun-hk04-cdn.hcwebsite.com/b825742be64ded4850a6819b1f5f7d80/tpl/en_xcmgshantui/assets/images/index-pro-bg.png)",
-                  background:
-                    "linear-gradient(230deg, rgba(71,71,71,0.241421568627451) 55%, rgba(24,74,255,0.333858543417367) 74%)",
-                }}
-              ></AppBox> */}
             </AppBox>
           );
         })}

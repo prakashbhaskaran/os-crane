@@ -23,7 +23,7 @@ const Warehouse = () => {
         />
       </AppVstack>
       <AppHstack
-        mt="1rem"
+        mt="2rem"
         sx={{ height: { xs: "450px", md: "600px" }, gap: "10px" }}
       >
         <AppVstack width="50%" height="100%" gap="10px">

@@ -14,7 +14,7 @@ export const metadata = {
 
 const ContactPage = () => {
   return (
-    <AppBox mt="5rem">
+    <AppBox mt="5rem" pb="2rem">
       <AppContainer>
         <AppHeader heading="Contact" />
         <Contact />

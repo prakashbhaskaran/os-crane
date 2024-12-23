@@ -6,8 +6,9 @@ import { heroSection } from "@constants/data";
 import OurProducts from "@components/page-components/home/OurProducts";
 import ChooseUs from "@components/page-components/home/ChooseUs";
 import Warehouse from "@components/page-components/home/Warehouse";
+import Brands from "@components/page-components/home/Brands";
 export const metadata = {
-  title: "Home",
+  title: "OS CRANE PARTS",
   description: "International and domestic crane parts suppliers",
 
   openGraph: {
@@ -55,11 +56,11 @@ export default function Home() {
           <Warehouse />
         </AppContainer>
       </AppBox>
-      {/* <AppVstack sx={greySection}>
+      <AppBox sx={greySection}>
         <AppContainer>
           <Brands />
         </AppContainer>
-      </AppVstack> */}
+      </AppBox>
     </AppBox>
   );
 }
