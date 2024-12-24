@@ -66,7 +66,7 @@ const AppNavbar = () => {
                 <GiHamburgerMenu color={color} size={23} />
               </IconButton>
             </AppHstack> */}
-            <AppHstack width={{ xs: "70%", lg: "30%" }} justifyContent="start">
+            <AppHstack width={{ xs: "70%", sm: "30%" }} justifyContent="start">
               <AppBox>
                 <AppLogo
                   textSx={{
