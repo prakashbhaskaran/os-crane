@@ -41,7 +41,11 @@ const OurProducts = () => {
         {ourProducts.map((item, index) => {
           return (
             <AppBox
-              sx={{ position: "relative", height: "300px", overflow: "hidden" }}
+              sx={{
+                position: "relative",
+                height: "300px",
+                overflow: "hidden",
+              }}
               key={index}
             >
               <MotionImage
@@ -54,9 +58,10 @@ const OurProducts = () => {
                 }}
                 alt="Crane"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "unset" }}
                 src={item.image}
               />
+
               <AppBox
                 sx={{
                   position: "absolute",
@@ -69,21 +74,35 @@ const OurProducts = () => {
                   <AppText
                     text={item.title || "Crane Parts"}
                     sx={{
-                      color: customPalette.global.secondary,
+                      color: customPalette.global.black,
                       fontWeight: "700",
                       fontSize: "1.1rem",
-                      // "-webkit-text-stroke": "1px red",
+                      // background: customPalette.global.black,
+                      borderLeft: "3px solid yellow",
+                      padding: "2px 6px",
+                      backdropFilter: "blur(16px)",
                     }}
                   />
-                  <AppBox
+                  {/* <AppBox
                     sx={{
                       height: "10px",
                       width: "70px",
-                      borderBottom: `5px solid ${customPalette.global.secondary}`,
+                      borderBottom: "5px solid yellow",
                     }}
-                  />
+                  /> */}
                 </AppBox>
               </AppBox>
+              {/* <AppBox
+                sx={{
+                  position: "absolute",
+                  bottom: "0px",
+                  left: "0px",
+                  top: "0px",
+                  right: "0px",
+                  background:
+                    "linear-gradient(230deg,  rgba(255,255,255,0.1) 80%,rgba(255,255,255,0.2) 20%)",
+                }}
+              ></AppBox> */}
             </AppBox>
           );
         })}

@@ -79,24 +79,25 @@ const chooseUs = [
 
 const ourProducts = [
   {
+    title: "Mobile Crane",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734948999/Our%20Products/apqub1uhqej4i1cj218q.jpg",
+  },
+  {
     title: "Excavator",
     image:
       "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949220/Our%20Products/vrgvhsgasn36nfgozq66.jpg",
   },
-  {
-    title: "Construction Machinery",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949219/Our%20Products/u8znyciu26t5yg4foxzv.jpg",
-  },
+
   {
     title: "Forklift",
     image:
       "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949020/Our%20Products/iyvmpk8z5mhm5ngnbdec.jpg",
   },
   {
-    title: "Mobile Crane",
+    title: "Construction Machinery",
     image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734948999/Our%20Products/apqub1uhqej4i1cj218q.jpg",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949219/Our%20Products/u8znyciu26t5yg4foxzv.jpg",
   },
 ];
 
@@ -188,32 +189,7 @@ const brands = [
   {
     name: "",
     image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/yzlghrsoovrzk4tpoxg6.jpg",
-  },
-  {
-    name: "",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/osi23ntsxcur7uq0wfgu.jpg",
-  },
-  {
-    name: "",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/su3pn558takhohjsgbor.jpg",
-  },
-  {
-    name: "",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/nbv8gj7ggbxawgmdjj2n.jpg",
-  },
-  {
-    name: "",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/e2ej4bbdjcmobs609iqj.png",
-  },
-  {
-    name: "",
-    image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/wulvaik5nsqauffkd2su.png",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/xymkq3zj9ohz4mywrxvb.jpg",
   },
   {
     name: "",
@@ -223,7 +199,32 @@ const brands = [
   {
     name: "",
     image:
-      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/xymkq3zj9ohz4mywrxvb.jpg",
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/wulvaik5nsqauffkd2su.png",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949492/brands/e2ej4bbdjcmobs609iqj.png",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/su3pn558takhohjsgbor.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/osi23ntsxcur7uq0wfgu.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/nbv8gj7ggbxawgmdjj2n.jpg",
+  },
+  {
+    name: "",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734949493/brands/yzlghrsoovrzk4tpoxg6.jpg",
   },
 ];
 

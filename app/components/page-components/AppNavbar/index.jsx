@@ -35,8 +35,8 @@ const AppNavbar = () => {
     setOpenSearch(true);
   };
 
-  let bgcolor = customPalette.global.white;
-  let color = cssStyle.mainColor;
+  let bgcolor = customPalette.global.primary;
+  let color = customPalette.global.white;
   return (
     <AppBox
       sx={{
@@ -75,6 +75,7 @@ const AppNavbar = () => {
                   textSx={{
                     color: color,
                   }}
+                  imageSrc="/assets/images/os_white_logo.png"
                   imageSize="30px"
                 />
               </AppBox>
@@ -98,12 +99,10 @@ const AppNavbar = () => {
                       href={_.link}
                       sx={{
                         height: "100%",
-                        color: customPalette.global.black,
+                        color: color,
                         fontWeight: "700",
                         borderBottom:
-                          pathname === _.link
-                            ? `3px solid ${customPalette.global.primary}`
-                            : "",
+                          pathname === _.link ? `3px solid ${color}` : "",
                       }}
                       textSx={{ color: customPalette.global.black }}
                     >

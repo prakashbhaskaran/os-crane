@@ -11,12 +11,12 @@ const Brands = () => {
   return (
     <AppBox>
       <AppVstack justifyContent="center" alignItems="center">
-        <AppHeader heading="PARTNER BRANDS" />
+        <AppHeader heading="SUPPORTING BRANDS" />
       </AppVstack>
       <AppGrid
         sx={{
           gridTemplateColumns: {
-            xs: "repeat(2, minmax(200px, auto))",
+            xs: "repeat(2, minmax(150px, auto))",
             md: "repeat(4, minmax(200px, auto))",
           },
 
