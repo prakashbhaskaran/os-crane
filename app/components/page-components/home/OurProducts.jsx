@@ -78,7 +78,7 @@ const OurProducts = () => {
                       fontWeight: "700",
                       fontSize: "1.1rem",
                       // background: customPalette.global.black,
-                      borderLeft: "3px solid yellow",
+                      borderLeft: `3px solid yellow`,
                       padding: "2px 6px",
                       backdropFilter: "blur(16px)",
                     }}

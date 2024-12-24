@@ -35,8 +35,8 @@ const AppNavbar = () => {
     setOpenSearch(true);
   };
 
-  let bgcolor = customPalette.global.primary;
-  let color = customPalette.global.white;
+  let bgcolor = customPalette.global.white;
+  let color = customPalette.global.primary;
   return (
     <AppBox
       sx={{
@@ -66,16 +66,12 @@ const AppNavbar = () => {
                 <GiHamburgerMenu color={color} size={23} />
               </IconButton>
             </AppHstack> */}
-            <AppHstack
-              // width={{ xs: "60%", lg: "80%" }}
-              justifyContent={{ xs: "center", lg: "start" }}
-            >
+            <AppHstack width={{ xs: "70%", lg: "30%" }} justifyContent="start">
               <AppBox>
                 <AppLogo
                   textSx={{
                     color: color,
                   }}
-                  imageSrc="/assets/images/os_white_logo.png"
                   imageSize="30px"
                 />
               </AppBox>
@@ -85,6 +81,7 @@ const AppNavbar = () => {
               sx={{
                 display: { xs: "none", md: "flex" },
                 gap: "20px",
+                width: "40%",
               }}
             >
               {navbarLinks.main.map((_) => {
@@ -99,7 +96,7 @@ const AppNavbar = () => {
                       href={_.link}
                       sx={{
                         height: "100%",
-                        color: color,
+                        color: customPalette.global.black,
                         fontWeight: "700",
                         borderBottom:
                           pathname === _.link ? `3px solid ${color}` : "",
@@ -113,7 +110,7 @@ const AppNavbar = () => {
               })}
             </AppHstack>
 
-            <AppHstack justifyContent="end" /* width="20%" */>
+            <AppHstack justifyContent="end" width="30%">
               <IconButton
                 onClick={handleDrawerOpen}
                 sx={{ display: { xs: "block", md: "none" } }}
