@@ -142,6 +142,122 @@ const topProducts = [
     image:
       "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1734682247/ozzlj3weesuuk232zoak.jpg",
   },
+  {
+    title: "XCMG Cabin Assy",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194386/xcmg/xpscdzic8hbh7vmzqcbm.jpg",
+    category: "xcmg",
+  },
+  {
+    title: "ESCORTS F15 Filter set",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194652/escorts/eb3hu1kfejvld5blqp0h.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ESCORTS F15 Solenoid Valve",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194659/escorts/mard9wy2d3ngtdkhowyp.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ESCORTS F15 rear view camera set",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194651/escorts/uvryx2kwtxpeve1vz8az.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ESCORTS Crane Alternator",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194658/escorts/jnv4msdjo3xdhp07t1zd.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ESCORTS Crane Crown Wheel & Pinion",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194673/escorts/x8xicpb7xsooqqvqa1or.jpg",
+    category: "escorts",
+  },
+
+  {
+    title: "ESCORTS Crane Air Filter Kit",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735194676/escorts/qugawpwq1ixdyict79vl.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ACE Crane Clutch Plate",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195654/ace/flvblw4wpdimf7nuhcwl.jpg",
+    category: "ace",
+  },
+  {
+    title: "ACE Crane Brake Oil Box",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195946/ace/twjvfmfyxe6xgcfcvhuo.jpg",
+    category: "escorts",
+  },
+  {
+    title: "ACE Crane Filter Kits",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195646/ace/kdhpruom0wg9yw60fs0a.jpg",
+    category: "ace",
+  },
+  {
+    title: "ACE Crane Master Cylinder",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195643/ace/bb6hmusve4ym4qukbpga.jpg",
+    category: "ace",
+  },
+
+  {
+    title: "ACE Crane Hydraulic Valve",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195646/ace/dvgkvrhiphs6iuuemqll.jpg",
+    category: "ace",
+  },
+  {
+    title: "ACE Hydra Unloader Valve Assy",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735195647/ace/xg4vf80km4fhtgwbc47t.jpg",
+    category: "ace",
+  },
+  {
+    title: "Forklift Double Gear",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197109/regular/gjlgxtyd1ji3s6gabo8j.jpg",
+    category: "regular",
+  },
+  {
+    title: "Forklift Silencer Bend",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197109/regular/oczquxg0fxachesjznsk.jpg",
+    category: "regular",
+  },
+  {
+    title: "Hydraulic Tank Cap",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197106/regular/jypdgwocjanslw6et23a.jpg",
+    category: "regular",
+  },
+  {
+    title: "Propeller Shaft",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197129/regular/r6sjaxca1on32rhx1c5a.jpg",
+    category: "regular",
+  },
+  {
+    title: "Crane Gears",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197132/regular/e2hsou6iqttpoxqm2x3l.jpg",
+    category: "regular",
+  },
+  {
+    title: "Hydra Cylinder Seal Kits",
+    image:
+      "https://res.cloudinary.com/dbzjtqvg5/image/upload/v1735197108/regular/dyhm4vjuqfpqqgnzalst.jpg",
+    category: "regular",
+  },
 ];
 const warehouse = [
   {

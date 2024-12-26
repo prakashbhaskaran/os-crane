@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { topProducts } from "@constants/data.jsx";
 import AppLink from "../AppLink";
 import { customPalette } from "@constants/style";
-import { Card } from "@mui/material";
+import { Avatar, Card } from "@mui/material";
 import AppButton from "@components/material-components/AppButton";
 
 const TopProducts = () => {
@@ -33,49 +33,69 @@ const TopProducts = () => {
               sx={{ position: "relative", height: "450px", overflow: "hidden" }}
               key={index}
             >
-              <AppBox
-                sx={{
-                  height: "330px",
-                  width: "100%",
-                  position: "relative",
-                  overFlow: "hidden",
-                }}
+              <motion.div
+                exit={{ opacity: 0, scale: 1.1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
               >
-                <MotionImage
-                  alt="Crane Parts"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  src={item.image}
-                />
-              </AppBox>
-              <AppVstack
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  mt: "1rem",
-                  gap: "1rem",
-                }}
-              >
-                <AppText
+                <AppBox
                   sx={{
-                    color: customPalette.global.black,
-                    fontWeight: "700",
+                    height: "330px",
+                    width: "100%",
+                    position: "relative",
+                    overFlow: "hidden",
                   }}
                 >
-                  {item.title}
-                </AppText>
-                <AppLink href={item.image} target="_blank">
-                  <AppButton
-                    color="secondary"
+                  {item.image ? (
+                    <MotionImage
+                      alt="Crane Parts"
+                      fill
+                      sizes="100vw"
+                      style={{ objectFit: "cover" }}
+                      src={item.image}
+                    />
+                  ) : (
+                    <Avatar
+                      sx={{
+                        width: "100%",
+                        height: "100%",
+                        background: customPalette.global.secondary,
+                      }}
+                      variant="square"
+                    >
+                      {item.title}
+                    </Avatar>
+                  )}
+                </AppBox>
+                <AppVstack
+                  sx={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    mt: "1rem",
+                    gap: "1rem",
+                  }}
+                >
+                  <AppText
                     sx={{
                       color: customPalette.global.black,
                       fontWeight: "700",
                     }}
                   >
-                    View full image
-                  </AppButton>
-                </AppLink>
-              </AppVstack>
+                    {item.title}
+                  </AppText>
+                  <AppLink href={item.image} target="_blank">
+                    <AppButton
+                      color="secondary"
+                      sx={{
+                        color: customPalette.global.black,
+                        fontWeight: "700",
+                      }}
+                    >
+                      View full image
+                    </AppButton>
+                  </AppLink>
+                </AppVstack>
+              </motion.div>
             </Card>
           );
         })}
