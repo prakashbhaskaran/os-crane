@@ -14,17 +14,16 @@ const AppFooter = () => {
   let year = d.getFullYear();
   const links = [
     {
-      name: "LEGAL",
+      name: "RESOURCES",
       list: [
-        { name: "Privacy Policy", link: "/policies/privacy-policy" },
-        { name: "Shipping Policy", link: "/policies/shipping-policy" },
-        { name: "Terms and Conditions", link: "/termsandconditions" },
+        { name: "Products", link: "/products" },
+        { name: "About", link: "/about" },
       ],
     },
     {
-      name: "RESOURCES",
+      name: "GET IN TOUCH",
       list: [
-        { name: "About", link: "/about" },
+        { name: "Enquire", link: "/enquire" },
         { name: "Contact", link: "/contact" },
       ],
     },
@@ -65,7 +64,7 @@ const AppFooter = () => {
             </AppVstack>
 
             <AppHstack
-              gap={"1rem"}
+              gap={"1.2rem"}
               flexDirection={{ xs: "column", md: "row" }}
               alignItems="start"
               width={{ xs: "100%", md: "initial" }}

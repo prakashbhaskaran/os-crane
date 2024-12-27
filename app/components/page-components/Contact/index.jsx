@@ -19,6 +19,8 @@ const Contact = () => {
       window.location.href = `tel:${value}`;
     } else if (name === "WhatsApp") {
       window.location.href = `https://wa.me/${value}`;
+    } else if (name === "Instagram") {
+      window.open(value, "_blank");
     }
   };
   return (
@@ -38,7 +40,7 @@ const Contact = () => {
             return (
               <AppBox
                 key={_.label}
-                sx={{ width: { xs: "100%", md: "400px" } }}
+                sx={{ width: { xs: "100%", md: "400px" }, cursor: "pointer" }}
                 onClick={() => handler(_.description, _.label)}
               >
                 <AppHstack gap={"10px"} alignItems="start">

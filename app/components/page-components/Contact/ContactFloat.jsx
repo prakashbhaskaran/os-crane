@@ -33,7 +33,7 @@ const ContactFloat = () => {
     >
       <AppGrid
         sx={{
-          gridTemplateColumns: "auto auto auto auto",
+          gridTemplateColumns: "auto auto auto auto auto",
           alignContent: "center",
         }}
       >

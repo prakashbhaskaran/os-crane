@@ -38,41 +38,48 @@ const ChooseUs = () => {
             <Card
               key={item.title}
               sx={{
-                p: "16px",
+                p: "14px",
                 boxShadow: 0,
                 height: "250px",
               }}
             >
-              <IconButton
+              <AppVstack
                 sx={{
-                  fontSize: "35px",
-                  mt: "0.8rem",
-                  color: customPalette.global.teritiary,
+                  justifyContent: "center",
+                  height: "100%",
+                  alignItems: "center",
                 }}
               >
-                {item.icon}
-              </IconButton>
-              <AppText
-                sx={{
-                  fontWeight: "700",
-                  fontSize: "1.2rem",
-                  color: customPalette.global.black,
-                }}
-                text={upperCase(item.title)}
-              />
-              {item.list.length > 0 && (
-                <AppVstack mt="1rem">
-                  {item.list.map((_) => {
-                    return (
-                      <AppText
-                        key={_.description}
-                        sx={{ color: "grey", fontWeight: "600" }}
-                        text={_.description}
-                      />
-                    );
-                  })}
-                </AppVstack>
-              )}
+                <IconButton
+                  sx={{
+                    fontSize: "35px",
+                    color: customPalette.global.teritiary,
+                  }}
+                >
+                  {item.icon}
+                </IconButton>
+                <AppText
+                  sx={{
+                    fontWeight: "700",
+                    fontSize: "1.2rem",
+                    color: customPalette.global.black,
+                  }}
+                  text={upperCase(item.title)}
+                />
+                {item.list.length > 0 && (
+                  <AppVstack mt="1rem">
+                    {item.list.map((_) => {
+                      return (
+                        <AppText
+                          key={_.description}
+                          sx={{ color: "grey", fontWeight: "600" }}
+                          text={_.description}
+                        />
+                      );
+                    })}
+                  </AppVstack>
+                )}
+              </AppVstack>
             </Card>
           );
         })}

@@ -1,6 +1,11 @@
 import { PiMedalFill } from "react-icons/pi";
 import { RiTeamFill, RiGlobalFill } from "react-icons/ri";
-import { FaShieldAlt, FaWhatsapp, FaMobileAlt } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaWhatsapp,
+  FaMobileAlt,
+  FaInstagramSquare,
+} from "react-icons/fa";
 import { FaWarehouse, FaLocationDot } from "react-icons/fa6";
 import { MdEmail, MdOutlineTouchApp } from "react-icons/md";
 
@@ -298,6 +303,12 @@ const contactList = [
     description: "/enquire",
     value: "enquire",
     icon: <MdOutlineTouchApp size={20} />,
+  },
+  {
+    label: "Instagram",
+    description: "https://www.instagram.com/os_crane/",
+    value: "@os_crane",
+    icon: <FaInstagramSquare size={20} />,
   },
 ];
 

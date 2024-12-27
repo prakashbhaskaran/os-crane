@@ -25,6 +25,8 @@ export const metadata = {
   },
   description: "International and domestic crane parts suppliers",
   keywords: [
+    "oscraneparts",
+    "oscraneparts.com",
     "xcmg crane parts",
     "xcmg spare parts",
     "hydra crane spare parts",
