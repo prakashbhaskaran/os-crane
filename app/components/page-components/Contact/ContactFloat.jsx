@@ -17,6 +17,8 @@ const ContactFloat = () => {
       window.location.href = `https://wa.me/${value}`;
     } else if (name === "Enquire") {
       router.push(value);
+    } else if (name === "Instagram") {
+      window.open(value, "_blank");
     }
   };
   return (
