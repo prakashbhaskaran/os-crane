@@ -39,7 +39,7 @@ export const metadata = {
     description: "International and domestic crane parts suppliers",
   },
   verification: {
-    google: "BzDyuVqEpacXwEg3rm-qMvz7g6-zMr3kYj8KlN7nwpo",
+    google: "g7kTRtZl5-MdZFnYtroBHagHJO9we1DuRlwa0jasstY",
   },
 };
 
